@@ -6,6 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
+  "engines": { 
+    "node": "v12.16.2" 
+  },
   "dependencies": {
     "vue": "^2.6.6",
     "vuetify": "^1.3.0",
