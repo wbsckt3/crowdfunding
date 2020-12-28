@@ -80,71 +80,7 @@
               </v-card-actions>
             </v-card>
           </v-dialog>
-        </v-layout>
-        
-        <v-layout row justify-center>
-          <v-dialog v-model="startProjectDialog2" max-width="600px" persistent>
-            <v-btn slot="activator" color="primary" dark>Aprende más</v-btn>
-            <v-card>
-              <v-card-title>
-                <span class="headline font-weight-bold mt-2 ml-4">Emprende tu proyecto</span>
-              </v-card-title>
-              <v-card-text class="pt-0">
-                <v-container class="pt-0" grid-list-md>
-                  <v-layout wrap>
-                    <v-flex xs12>
-                      <v-text-field
-                        label="Title"
-                        persistent-hint
-                        v-model="newProject.title">
-                      </v-text-field>
-                    </v-flex>
-                    <v-flex xs12>
-                      <v-textarea
-                        label="Description"
-                        persistent-hint
-                        v-model="newProject.description">
-                      </v-textarea>
-                    </v-flex>
-                    <v-flex xs12 sm6>
-                      <v-text-field
-                        label="Amount Needed (ETH)"
-                        type="number"
-                        step="0.0001"
-                        min="0"
-                        v-model="newProject.amountGoal">
-                      </v-text-field>
-                    </v-flex>
-                    <v-flex xs12 sm6>
-                      <v-text-field
-                        label="Duration (in days)"
-                        type="number"
-                        v-model="newProject.duration">
-                      </v-text-field>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-card-text>
-              <v-card-actions>
-                <v-spacer></v-spacer>
-                <v-btn
-                  color="blue darken-1"
-                  flat
-                  @click="startProjectDialog = false;
-                  newProject.isLoading = false;">
-                  Close
-                </v-btn>
-                <v-btn color="blue darken-1"
-                  flat
-                  @click="startProject"
-                  :loading="newProject.isLoading">
-                  Save
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-dialog>
-        </v-layout>
-        
+        </v-layout>   
         
       </v-container>
 
@@ -255,6 +191,24 @@
             </v-hover>
           </v-flex>
         </v-layout>
+        
+        <v-layout
+          text-xs-center
+          wrap
+        >
+          <v-flex mb-4>
+            <p class="subheading font-weight-regular">
+               ¿Por qué hacer una aplicación de crowdfunding?
+Las grandes ideas necesitan esfuerzo y financiación. Puede solicitar donaciones o solicitudes, pero los donantes, por supuesto, preferirían donar a proyectos en los que tienen algún tipo de certeza de que el proyecto realmente va a alguna parte.
+Aquí es donde entra el crowdfunding, una configuración ideal en la que puede especificar su objetivo y una fecha límite para alcanzarlo. Si no cumple con su objetivo, las donaciones se devuelven, lo que reduce el riesgo para los donantes.
+Las plataformas existentes son todas geniales, pero en cada proyecto completado o en cada donación enviada, la plataforma toma un cierto porcentaje (margen) que podría, en ocasiones, ser demasiado alto para los iniciadores del proyecto. Es más, dependemos en gran medida de ellos como el tercero que nos conecta con los donantes. Si fracasan, también estaremos en problemas.
+Con una configuración descentralizada, podemos tener una plataforma sin confianza y, por lo tanto, las únicas tarifas que todos pagarán son solo las tarifas del gas (Ver mas sobre Ethereum).
+Esta es también una de las aplicaciones que es bueno construir desde el principio, porque definitivamente puedes aprender mucho al hacerlo.
+            
+            </p>
+          </v-flex>
+        </v-layout>
+        
       </v-container>
     </v-content>
   </v-app>
