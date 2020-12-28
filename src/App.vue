@@ -10,6 +10,7 @@
             <h2 class="">
                EthProxy 🌱 | Crowdfunding Colombia 
             </h2>
+            <hr/>
             <p class="subheading font-weight-regular">
               Utiliza Ethereum para crowdfunding descentralizado<br> 
               Adquiere algo de Ether para realizar tu aporte o crear tu propio proyecto instalando
