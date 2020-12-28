@@ -1,10 +1,12 @@
 {
   "name": "crowdfunding",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "src/main.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "start": "node src/main.js"
   },
   "engines": { 
     "node": "v12.16.2" 
