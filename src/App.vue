@@ -193,17 +193,18 @@
         </v-layout>
         
         <v-layout
-          text-xs-center
+          text-xs-left
           wrap
         >
           <v-flex mb-4>
             <p class="subheading font-weight-regular">
-               ¿Por qué hacer una aplicación de crowdfunding?
-Las grandes ideas necesitan esfuerzo y financiación. Puede solicitar donaciones o solicitudes, pero los donantes, por supuesto, preferirían donar a proyectos en los que tienen algún tipo de certeza de que el proyecto realmente va a alguna parte.
-Aquí es donde entra el crowdfunding, una configuración ideal en la que puede especificar su objetivo y una fecha límite para alcanzarlo. Si no cumple con su objetivo, las donaciones se devuelven, lo que reduce el riesgo para los donantes.
-Las plataformas existentes son todas geniales, pero en cada proyecto completado o en cada donación enviada, la plataforma toma un cierto porcentaje (margen) que podría, en ocasiones, ser demasiado alto para los iniciadores del proyecto. Es más, dependemos en gran medida de ellos como el tercero que nos conecta con los donantes. Si fracasan, también estaremos en problemas.
-Con una configuración descentralizada, podemos tener una plataforma sin confianza y, por lo tanto, las únicas tarifas que todos pagarán son solo las tarifas del gas (Ver mas sobre Ethereum).
-Esta es también una de las aplicaciones que es bueno construir desde el principio, porque definitivamente puedes aprender mucho al hacerlo.
+            
+            <b>¿Por qué hacer una aplicación de crowdfunding para Colombia?</b><br><br>
+            Las grandes ideas necesitan esfuerzo y financiación. Puede solicitar donaciones o inversores, pero los donantes, por supuesto, preferirían donar a proyectos en los que tienen algún tipo de certeza de que el proyecto realmente va a alguna parte.
+            Aquí es donde entra el crowdfunding, una configuración ideal en la que puede especificar su objetivo y una fecha límite para alcanzarlo. Si no cumple con su objetivo, las donaciones se devuelven, lo que reduce el riesgo para los donantes.
+            Las plataformas existentes son todas geniales, pero en cada proyecto completado o en cada donación enviada, la plataforma toma un cierto porcentaje (margen) que podría, en ocasiones, ser demasiado alto para los iniciadores del proyecto. 
+            Es más, dependemos en gran medida de ellos como el tercero que nos conecta con los donantes. Si fracasan, también estaremos en problemas.
+            Con una configuración descentralizada, podemos tener una plataforma sin confianza y, por lo tanto, las únicas tarifas que todos pagarán son solo las tarifas del gas (Ver mas sobre Ethereum).
             
             </p>
           </v-flex>
