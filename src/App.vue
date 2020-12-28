@@ -8,10 +8,10 @@ un<template>
         >
           <v-flex mb-4>
             <h1 class="display-2 font-weight-bold mb-3">
-              EthProxy 🌱 Crowdfunding Colombia 2021
+              Crowdfunding
             </h1> 
             <p class="subheading font-weight-regular">
-              Utiliza Ethereum para crowdfunding descentralizado<br>
+              Utiliza Ethereum para crowdfunding descentralizado 
               Adquiere algo de Ether para realizar tu aporte o crear tu propio proyecto instalando Metamask</p>
           </v-flex>
         </v-layout>
