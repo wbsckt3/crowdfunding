@@ -222,12 +222,36 @@ export default {
   },
   methods: {
     getProjects() {
-      // Operations for retrieving all existing projects will be here!
-      console.log('Get projects!');
+        crowdfundInstance.methods.returnAllProjects().call().then((projects) => {
+        projects.forEach((projectAddress) => {
+          const projectInst = crowdfundProject(projectAddress);
+          projectInst.methods.getDetails().call().then((projectData) => {
+            const projectInfo = projectData;
+            projectInfo.isLoading = false;
+            projectInfo.contract = projectInst;
+            this.projectData.push(projectInfo);
+          });
+        });
+      });
     },
     startProject() {
-      // Operations for starting a new crowdfunding project will be here!
-      console.log('Start project!');
+      this.newProject.isLoading = true;
+      crowdfundInstance.methods.startProject(
+        this.newProject.title,
+        this.newProject.description,
+        this.newProject.duration,
+        web3.utils.toWei(this.newProject.amountGoal, 'ether'),
+      ).send({
+        from: this.account,
+      }).then((res) => {
+        const projectInfo = res.events.ProjectStarted.returnValues;
+        projectInfo.isLoading = false;
+        projectInfo.currentAmount = 0;
+        projectInfo.currentState = 0;
+        projectInfo.contract = crowdfundProject(projectInfo.contractAddress);
+        this.startProjectDialog = false;
+        this.newProject = { isLoading: false };
+      });
     },
     fundProject(address) {
       // Operations for funding an existing crowdfunding project will be here!
