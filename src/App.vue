@@ -12,7 +12,7 @@
             </h2>
             <hr/>
             <p class="subheading font-weight-regular">
-              Utiliza Ethereum para crowdfunding descentralizado<br> 
+              Utiliza Ethereum para crowdfunding descentralizado<br><br> 
               Adquiere algo de Ether para realizar tu aporte o crear tu propio proyecto instalando
               <a href="https://metamask.io" target="_blank">Metamask (Extension Google Chrome)</a>
             </p>
@@ -86,7 +86,7 @@
       <v-container
         grid-list-lg
       >
-        <h2 class="" style="margin-top: -90px;">
+        <h2 class="" style="margin-top: -75px;">
           Proyectos en curso
         </h2>
         <v-layout row wrap>
