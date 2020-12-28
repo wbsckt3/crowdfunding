@@ -204,7 +204,7 @@
             Aquí es donde entra el crowdfunding, una configuración ideal en la que puede especificar su objetivo y una fecha límite para alcanzarlo. Si no cumple con su objetivo, las donaciones se devuelven, lo que reduce el riesgo para los donantes.
             Las plataformas existentes son todas geniales, pero en cada proyecto completado o en cada donación enviada, la plataforma toma un cierto porcentaje (margen) que podría, en ocasiones, ser demasiado alto para los iniciadores del proyecto. 
             Es más, dependemos en gran medida de ellos como el tercero que nos conecta con los donantes. Si fracasan, también estaremos en problemas.
-            Con una configuración descentralizada, podemos tener una plataforma sin confianza y, por lo tanto, las únicas tarifas que todos pagarán son solo las tarifas del gas (Ver mas sobre Ethereum).
+            Con una configuración descentralizada, podemos tener una plataforma sin confianza y, por lo tanto, las únicas tarifas que todos pagarán son solo las tarifas del gas ( <a href="https://ethereum.org/es/" target="_blank">Aprende más sobre Ethereum</a> ).
             
             </p>
           </v-flex>
