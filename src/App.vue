@@ -7,11 +7,11 @@
           wrap
         >
           <v-flex mb-4>
-            <h1 class="display-2 font-weight-bold mb-3">
-              Crowdfunding
-            </h1>
+            <h2 class="display-2 font-weight-bold mb-3">
+              EthProxy | Crowdfunding Colombia🌱
+            </h2>
             <p class="subheading font-weight-regular">
-              Utilizing Ethereum for Decentralized Crowdfunding
+              Utiliza Ethereum para crowdfunding descentralizado
             </p>
           </v-flex>
         </v-layout>
