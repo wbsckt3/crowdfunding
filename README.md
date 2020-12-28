@@ -57,3 +57,15 @@ Website: https://openberry.ac/
 Medium: https://medium.com/openberry
 
 Twitter: https://twitter.com/openberry_ac
+
+------------
+
+To Herou deploy add:
+
+https://www.binarcode.com/blog/deploying-vue-apps-to-heroku-the-right-way/
+
+- server.js
+- dependencie express 4.17.1
+- scripts : 
+  "postinstall": "npm run build",
+  "start": "node server.js",
