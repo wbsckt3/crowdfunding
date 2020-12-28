@@ -6,10 +6,11 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "start": "node src/main.js"
+    "start": "npm run serve"
   },
   "engines": { 
-    "node": "v12.16.2" 
+    "node": "v12.16.2",
+    "npm" : "v6.6.0"
   },
   "dependencies": {
     "vue": "^2.6.6",
