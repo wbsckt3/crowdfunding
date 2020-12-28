@@ -7,13 +7,13 @@
           wrap
         >
           <v-flex mb-4>
-            <h1 class="display-2 font-weight-bold mb-3">
+            <h2 class="display-2 font-weight-bold mb-3">
                EthProxy 🌱 | Crowdfunding Colombia 
-            </h1>
+            </h2>
             <p class="subheading font-weight-regular">
               Utiliza Ethereum para crowdfunding descentralizado 
-              Adquiere algo de Ether para realizar tu aporte o crear tu propio proyecto instalando Metamask
-              <a href="https://metamask.io" target="_blank">Metamask (Extension para Google Chrome)</a>
+              Adquiere algo de Ether para realizar tu aporte o crear tu propio proyecto instalando
+              <a href="https://metamask.io" target="_blank">Metamask (Extension Google Chrome)</a>
             </p>
           </v-flex>
         </v-layout>
