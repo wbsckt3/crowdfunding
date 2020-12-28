@@ -1,8 +1,22 @@
 /* eslint-disable */
 import web3 from './web3';
 
-const address = '0xd9145CCE52D386f254917e481eB44e9943F39138';
+const address = '0xd8b934580fcE35a11B58C6D73aDeE468a2833fa8';
 const abi = [
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "returnAllProjects",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
 	{
 		"constant": false,
 		"inputs": [
@@ -65,20 +79,6 @@ const abi = [
 		],
 		"name": "ProjectStarted",
 		"type": "event"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "returnAllProjects",
-		"outputs": [
-			{
-				"name": "",
-				"type": "address[]"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
 	}
 ];
 
