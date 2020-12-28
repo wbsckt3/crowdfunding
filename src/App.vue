@@ -21,7 +21,7 @@
 
         <v-layout row justify-center>
           <v-dialog v-model="startProjectDialog" max-width="600px" persistent>
-            <v-btn slot="activator" color="primary" dark>Start a Project</v-btn>
+            <v-btn slot="activator" color="primary" dark>Emprende un proyecto</v-btn>
             <v-card>
               <v-card-title>
                 <span class="headline font-weight-bold mt-2 ml-4">Bring your project to life</span>
@@ -86,9 +86,9 @@
       <v-container
         grid-list-lg
       >
-        <h1 class="display-1 font-weight-bold mb-3">
-          Projects
-        </h1>
+        <h2 class="display-1 font-weight-bold mb-3" style="margin-top: -90px;">
+          Proyectos en curso
+        </h2>
         <v-layout row wrap>
           <v-flex v-for="(project, index) in projectData" :key="index" xs12>
             <v-dialog
