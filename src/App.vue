@@ -86,7 +86,7 @@
       <v-container
         grid-list-lg
       >
-        <h2 class="display-1 font-weight-bold mb-3" style="margin-top: -90px;">
+        <h2 class="" style="margin-top: -90px;">
           Proyectos en curso
         </h2>
         <v-layout row wrap>
