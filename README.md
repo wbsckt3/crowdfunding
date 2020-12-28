@@ -60,7 +60,7 @@ Twitter: https://twitter.com/openberry_ac
 
 ------------
 
-To Herou deploy add:
+To Heroku deploy add:
 
 https://www.binarcode.com/blog/deploying-vue-apps-to-heroku-the-right-way/
 
