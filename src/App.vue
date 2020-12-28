@@ -7,9 +7,9 @@ un<template>
           wrap
         >
           <v-flex mb-4>
-            <h2 class="display-2 font-weight-bold mb-3">
+            <h1 class="display-2 font-weight-bold mb-3">
               EthProxy 🌱 | Crowdfunding Colombia 2021
-            </h2>
+            </h1>
             <p class="subheading font-weight-regular">
               Utiliza Ethereum para crowdfunding descentralizado<br>
               Adquiere algo de Ether para realizar tu aporte o crear tu propio proyecto desde <a href="https://metamask.io">Metamask (Extension para Google Chrome)</a>
