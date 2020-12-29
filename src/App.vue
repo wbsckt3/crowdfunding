@@ -144,7 +144,7 @@
                   v-if="project.currentState == 0 && account != project.projectStarter"
                   class="d-flex ml-3" xs12 sm6 md3>
                   <v-text-field
-                    label="Amount (in ETH)"
+                    label="Cantidad (en ETH)"
                     type="number"
                     step="0.0001"
                     min="0"
@@ -156,7 +156,7 @@
                     @click="fundProject(index)"
                     :loading="project.isLoading"
                   >
-                    Fund
+                    Donar
                   </v-btn>
                 </v-flex>
                 <v-flex class="d-flex ml-3" xs12 sm6 md3>
