@@ -69,13 +69,13 @@ o<template>
                   flat
                   @click="startProjectDialog = false;
                   newProject.isLoading = false;">
-                  Close
+                  Cerrar
                 </v-btn>
                 <v-btn color="blue darken-1"
                   flat
                   @click="startProject"
                   :loading="newProject.isLoading">
-                  Save
+                  Crear proyecto
                 </v-btn>
               </v-card-actions>
             </v-card>
@@ -106,7 +106,7 @@ o<template>
                 <v-spacer></v-spacer>
                 <v-btn
                   color="blue darken-1" flat @click="startProjectDialog2 = false;">
-                  Close
+                  Cerrar
                 </v-btn>
               </v-card-actions>
             </v-card>
