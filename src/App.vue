@@ -80,6 +80,40 @@
               </v-card-actions>
             </v-card>
           </v-dialog>
+        </v-layout>
+        
+        <v-layout row justify-center>
+          <v-dialog v-model="startProjectDialog2" max-width="600px" persistent>
+            <v-btn slot="activator" color="primary" dark>Motivación</v-btn>
+            <v-card>
+              <v-card-title>
+                <span class="headline font-weight-bold mt-2 ml-4">¿Por qué hacer una aplicación de crowdfunding para Colombia?</span>
+              </v-card-title>
+              <v-card-text class="pt-0">
+                <v-container class="pt-0" grid-list-md>
+                  <v-layout wrap>
+                  
+            Las grandes ideas necesitan esfuerzo y financiación. Puede solicitar donaciones o inversores, pero los donantes, por supuesto, preferirían donar a proyectos en los que tienen algún tipo de certeza de que el proyecto realmente va a alguna parte.
+            Aquí es donde entra en juego el crowdfunding, una configuración ideal en la que puede especificar su objetivo y una fecha límite para alcanzarlo. Si no cumple con su objetivo, las donaciones se devuelven, lo que reduce el riesgo para los donantes.
+            Las plataformas existentes son todas geniales, pero en cada proyecto completado o en cada donación enviada, la plataforma toma un cierto porcentaje (margen) que podría, en ocasiones, ser demasiado alto para los emprendedores. 
+            Es más, dependemos en gran medida de ellos como la tercera parte que nos conecta con los donantes. Si fracasan ellos, también nosotros estaremos en problemas.
+            Con una configuración descentralizada, podemos tener una plataforma que no requiere de confianza entre las partes (en lo que se basa el sistema financiero actual), por lo tanto, las únicas tarifas que todos pagarán son solo las tarifas del gas ( <a href="https://ethereum.org/es/" target="_blank">Aprende más sobre Ethereum</a> ).
+            
+                  </v-layout>
+                </v-container>
+              </v-card-text>
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn
+                  color="blue darken-1"
+                  flat
+                  @click="startProjectDialog2 = false;
+                  newProject.isLoading = false;">
+                  Close
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
         </v-layout>   
         
       </v-container>
