@@ -8,7 +8,7 @@ o<template>
         >
           <v-flex mb-4>
             <h2 class="">
-               EthProxy 🌱 | Crowdfunding Colombia 
+               EthProxy 🌱 | Latam Crowdfunding 
             </h2>
             <hr/>
             <p class="subheading font-weight-regular">
@@ -209,7 +209,7 @@ o<template>
             <v-btn slot="activator" color="blue darken-1" dark>Motivación 😀🌱🥳 </v-btn>
             <v-card>
               <v-card-title>
-                <span class="headline font-weight-bold mt-2 ml-4">¿Por qué hacer una aplicación de crowdfunding para Colombia? 😀🌱🥳</span>
+                <span class="headline font-weight-bold mt-2 ml-4">¿Por qué una aplicación de crowdfunding para 🦜 Latinoamerica? </span>
               </v-card-title>
               <v-card-text class="pt-0">
                 <v-container class="pt-0" grid-list-md>
@@ -219,7 +219,7 @@ o<template>
             Aquí es donde entra en juego el crowdfunding, una configuración ideal en la que puede especificar su objetivo y una fecha límite para alcanzarlo. Si no cumple con su objetivo, las donaciones se devuelven, lo que reduce el riesgo para los donantes.
             Las plataformas existentes son todas geniales, pero en cada proyecto completado o en cada donación enviada, la plataforma toma un cierto porcentaje (margen) que podría, en ocasiones, ser demasiado alto para los emprendedores. 
             Es más, dependemos en gran medida de ellos como la tercera parte que nos conecta con los donantes. Si fracasan ellos, también nosotros estaremos en problemas.
-            Con una configuración descentralizada, podemos tener una plataforma que no requiere de confianza entre las partes (en lo que se basa el sistema financiero actual), por lo tanto, las únicas tarifas que todos pagarán son solo las tarifas del gas ( <a href="https://ethereum.org/es/" target="_blank">Aprende más sobre Ethereum</a> ).
+            Con una configuración descentralizada, podemos tener una plataforma que no requiere de confianza entre las partes (en lo que se basa el sistema financiero tradicional), por lo tanto, las únicas tarifas que todos pagarán son solo las tarifas del gas <a href="https://ethereum.org/es/" target="_blank">Aprende más sobre Ethereum y arquitecturas web descentralizadas</a>
             
                   </v-layout>
                 </v-container>
