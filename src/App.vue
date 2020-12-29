@@ -229,7 +229,7 @@ o<template>
         >
           <v-flex mb-4>                       
             <p class="subheading font-weight-regular">
-             Los creadores de proyectos no pueden financiar su propio proyecto, es por este motivo que al momento de crear tu proyecto 
+             Los emprendedores no pueden financiar su propio proyecto, es por este motivo que al momento de crear tu proyecto 
              no puedes donar ETH al mismo.
             </p>
           </v-flex>
