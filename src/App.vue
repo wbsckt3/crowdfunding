@@ -1,4 +1,4 @@
-<template>
+o<template>
   <v-app class="grey lighten-3">
     <v-content>
       <v-container>
@@ -31,21 +31,21 @@
                   <v-layout wrap>
                     <v-flex xs12>
                       <v-text-field
-                        label="Title"
+                        label="Titulo"
                         persistent-hint
                         v-model="newProject.title">
                       </v-text-field>
                     </v-flex>
                     <v-flex xs12>
                       <v-textarea
-                        label="Description"
+                        label="Descripción"
                         persistent-hint
                         v-model="newProject.description">
                       </v-textarea>
                     </v-flex>
                     <v-flex xs12 sm6>
                       <v-text-field
-                        label="Amount Needed (ETH)"
+                        label="Cantidad requerida (ETH)"
                         type="number"
                         step="0.0001"
                         min="0"
@@ -54,7 +54,7 @@
                     </v-flex>
                     <v-flex xs12 sm6>
                       <v-text-field
-                        label="Duration (in days)"
+                        label="Duración (en dias)"
                         type="number"
                         v-model="newProject.duration">
                       </v-text-field>
@@ -223,6 +223,18 @@
           </v-flex>
         </v-layout>      
         
+        <v-layout
+          text-xs-center
+          wrap
+        >
+          <v-flex mb-4>                       
+            <p class="subheading font-weight-regular">
+             Los creadores de proyectos no pueden financiar su propio proyecto, es por este motivo que al momento de crear tu proyecto 
+             no puedes donar ETH al mismo.
+            </p>
+          </v-flex>
+        </v-layout>      
+        
       </v-container>
     </v-content>
   </v-app>
@@ -240,7 +252,7 @@ export default {
       startProjectDialog: false,
       account: null,
       stateMap: [
-        { color: 'primary', text: 'Ongoing' },
+        { color: 'primary', text: 'En curso' },
         { color: 'warning', text: 'Expired' },
         { color: 'success', text: 'Completed' },
       ],
