@@ -105,10 +105,7 @@
               <v-card-actions>
                 <v-spacer></v-spacer>
                 <v-btn
-                  color="blue darken-1"
-                  flat
-                  @click="startProjectDialog2 = false;
-                  newProject.isLoading = false;">
+                  color="blue darken-1" flat @click="startProjectDialog2 = false;">
                   Close
                 </v-btn>
               </v-card-actions>
