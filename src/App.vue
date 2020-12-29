@@ -83,7 +83,7 @@ o<template>
         </v-layout>
         
         <v-layout row justify-center>
-          <v-dialog v-model="startProjectDialog" max-width="600px" persistent>
+          <v-dialog v-model="startProjectDialog2" max-width="600px" persistent>
             <v-btn slot="activator" color="primary" dark>Motivación</v-btn>
             <v-card>
               <v-card-title>
@@ -105,7 +105,7 @@ o<template>
               <v-card-actions>
                 <v-spacer></v-spacer>
                 <v-btn
-                  color="blue darken-1" flat @click="startProjectDialog = false;">
+                  color="blue darken-1" flat @click="startProjectDialog2 = false;">
                   Cerrar
                 </v-btn>
               </v-card-actions>
@@ -250,6 +250,7 @@ export default {
   data() {
     return {
       startProjectDialog: false,
+      startProjectDialog2: true,
       account: null,
       stateMap: [
         { color: 'primary', text: 'En curso' },
