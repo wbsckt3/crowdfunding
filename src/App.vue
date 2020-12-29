@@ -206,10 +206,10 @@ o<template>
         
         <v-layout row justify-left>
           <v-dialog v-model="startProjectDialog2" max-width="600px" persistent>
-            <v-btn slot="activator" color="blue darken-1" dark>Motivación 😀😁🥳 </v-btn>
+            <v-btn slot="activator" color="blue darken-1" dark>Motivación 😀🌱🥳 </v-btn>
             <v-card>
               <v-card-title>
-                <span class="headline font-weight-bold mt-2 ml-4">¿Por qué hacer una aplicación de crowdfunding para Colombia? 😀😁🥳</span>
+                <span class="headline font-weight-bold mt-2 ml-4">¿Por qué hacer una aplicación de crowdfunding para Colombia? 😀🌱🥳</span>
               </v-card-title>
               <v-card-text class="pt-0">
                 <v-container class="pt-0" grid-list-md>
