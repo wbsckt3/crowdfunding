@@ -226,10 +226,18 @@ o<template>
               </v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
+                
                 <v-btn
                   color="blue darken-1" flat @click="startProjectDialog2 = false;">
                   Cerrar
                 </v-btn>
+                
+                <a href="https://ethereum.org/es/" target="_blank">Aprende más sobre Ethereum y arquitecturas web descentralizadas</a>
+                |
+                <a href="https://ethereum.org/es/" target="_blank">Matemáticas financieras para Ethereum</a>
+                |
+                <a href="https://ethereum.org/es/" target="_blank">Asesoria personalizada</a>
+                
               </v-card-actions>
             </v-card>
           </v-dialog>
