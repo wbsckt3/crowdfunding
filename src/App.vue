@@ -207,6 +207,12 @@ o<template>
         <v-layout row justify-left>
           <v-dialog v-model="startProjectDialog2" max-width="600px" persistent>
             <v-btn slot="activator" color="blue darken-1" dark>Motivación 😀🌱🥳 </v-btn>
+             <a href="https://ethereum.org/es/" target="_blank">Aprende más sobre Ethereum y arquitecturas web descentralizadas</a>
+             |
+             <a href="https://ethereum.org/es/" target="_blank">Matemáticas financieras para Ethereum</a>
+             |
+             <a href="https://ethereum.org/es/" target="_blank">Asesoria personalizada</a>
+             
             <v-card>
               <v-card-title>
                 <span class="headline font-weight-bold mt-2 ml-4">¿Por qué una aplicación de crowdfunding para 🦜 Latinoamerica? </span>
@@ -231,13 +237,7 @@ o<template>
                   color="blue darken-1" flat @click="startProjectDialog2 = false;">
                   Cerrar
                 </v-btn>
-                
-                <a href="https://ethereum.org/es/" target="_blank">Aprende más sobre Ethereum y arquitecturas web descentralizadas</a>
-                |
-                <a href="https://ethereum.org/es/" target="_blank">Matemáticas financieras para Ethereum</a>
-                |
-                <a href="https://ethereum.org/es/" target="_blank">Asesoria personalizada</a>
-                
+                                        
               </v-card-actions>
             </v-card>
           </v-dialog>
