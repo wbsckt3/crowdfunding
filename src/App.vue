@@ -213,7 +213,7 @@
           </v-flex>
         </v-layout> 
         
-        <v-layout row justify-left>
+        <v-layout row justify-left style="background: #d3f59f">
           <v-dialog v-model="startProjectDialog2" max-width="600px" persistent>
             <v-btn slot="activator" color="blue darken-1" dark>Motivación 😀🌱🥳 </v-btn>                     
             <v-card>
