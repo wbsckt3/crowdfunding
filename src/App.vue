@@ -7,7 +7,7 @@
           wrap
         >
           <v-flex mb-4>
-            <h2 class="" style="background: #adff2f69">
+            <h2 class="" style="background: #adff2f69; margin-top: -24px; padding-top: 20px;">
                EthProxy 🌱 | Latam Crowdfunding 
             </h2>
             <hr/>
