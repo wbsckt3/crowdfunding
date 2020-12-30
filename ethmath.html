@@ -1,0 +1,290 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Buy Paper</title>
+  <meta name="viewport" content="width=device-width, target-densityDpi=device-dpi">
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/gh/null-point-sys/md5-js/md5.pack.js" 
+  type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/pbkdf2.js"></script>
+ 
+   <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(function() {
+                console.log('Service Worker Registered');
+          });
+      }
+    </script>
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+  <div id="container"></div>
+  <script type="text/babel">	
+   class ExternalData extends React.Component{ 
+	  state = {
+		  error     : null,
+		  isLoaded  : false,
+		  items  	  : [],
+      gas       : "21000",
+      gwei      : "",
+      eth       : "",
+      costoeth  : "734.66",
+      tarifaus  : "",
+      tarifacop : "",
+		  acompagnante : [{
+        "_id": "5e7c3b13c0c3bf0017b543e6",
+        "Price": "0",
+        "Current_state": "issued",
+        "PreviousHash": "0",
+        "Hash": "0",
+        "_createdOn": "2020-03-26T05:18:11.779Z"
+      }],
+      hash : "s8dfgs8d6gsdh3434343",
+		  id   : localStorage.getItem('id')
+	  };
+  
+	  componentDidMount() {
+		  // carga datos del genesis block
+		  var id = Date.now();
+		  id     = id.toString();
+
+		  /*axios.get("https://jsonbox.io/box_5aaf51bfab38c88aba30").then(
+			result => {
+			result.data[0]._id = id;
+			console.log(result.data);
+			this.setState({
+			  isLoaded: true,
+			  acompagnante : result.data
+			}); 
+			},
+			error => {
+			this.setState({
+			  isLoaded: true,
+			  error
+			});
+			}
+		  );*/
+
+		  var obj = this.state.acompagnante[0]; // para agregar el form al state
+
+		   var ite = JSON.parse(localStorage.getItem("ite"));
+		   if(ite == null) ite = [];
+		   this.setState({
+			  isLoaded: true,
+			  items: ite // it
+			});  
+	  }
+
+	  mySubmitHandler = (event) => {
+		  event.preventDefault();
+		  var obj = this.state.acompagnante[0];
+		  // coger el state actualizado con la lista remota desde el component did componentDidMount y agregarle el obj del formulario
+		  
+		  /*this.setState({
+			  isLoaded: true,
+			  items: obj
+			});*/  
+
+		  this.state.items.push( obj );
+		  /*this.setState({
+			  items: obj
+		  }); */
+
+		  /*var newJson =localStorage.getItem( 'ite' ); // obtenemos los usuarios lista
+		  var it = JSON.parse(newJson);
+		  it.push(iss);
+		  ct = JSON.stringify(it) */
+		  //localStorage.setItem('ites', ct);
+
+		  var ct = JSON.stringify(this.state.items);
+		  //localStorage.setItem('ites', ct);
+		  
+		  var ciphertext = CryptoJS.AES.encrypt(ct, 'secret key 123').toString();
+		  var ct = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(ciphertext));
+		  axios({
+			method: 'post',
+			url: 'https://wbsckt.herokuapp.com/crearusuario',
+			data: 'usu=ale&pass='+ ct,
+			headers: {
+			  'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
+			}
+		  })
+
+		  let nam = '_id';         let val  = ""; Object.assign(obj, {[nam]:  val}); // excluimos el _id del envío
+		  let nam2 = '_createdOn'; let val2 = ""; Object.assign(obj, {[nam2]: val2}); // excluimos el _createdOn del envío
+		  // crear el hash md5: 
+		  var concat = "";
+		  for (var prop in obj){
+					 if (obj.hasOwnProperty(prop)) {
+				  concat = concat + obj[prop];
+			  }
+		  } console.log(concat);
+		  this.state.acompagnante[0].Hash = md5(concat);  
+
+		  const { Price, Current_state, PreviousHash, Hash} 
+		  = this.state.acompagnante[0];
+		  
+		  // envía el issue a DB
+		  /*axios.post('https://jsonbox.io/box_b2b2fd0f29ec1858e194', 
+		  { Price, Current_state, PreviousHash, Hash })
+		  .then((result) => { alert("Paper emitido"); location.reload(); }
+		  ); */
+
+		 //window.location.replace("index5.html");
+      alert('Bloque emitido ok');
+	  }
+
+	  myChangeHandler = (event) => {
+		  let nam = event.target.name;
+		  let val = event.target.value;
+	    var obj = this.state.acompagnante[0];
+      if(nam == "gas"){
+        this.setState({
+			    gas: val
+			  });
+      }
+      if(nam == "gwei"){ 
+        this.setState({
+			    gwei      : val,
+          eth       : this.state.gas*(val/1000000000),
+          costoeth  : this.state.costoeth,
+          tarifaus  : ( this.state.gas*(val/1000000000) )*734.66,
+          tarifacop : ( this.state.gas*(val/1000000000) )*734.66*3473
+			  });
+      }
+
+      if(nam == "costoeth"){ 
+        this.setState({
+			    costoeth      : val,
+          tarifaus  : ( this.state.eth )*406,
+          tarifacop : ( this.state.eth )*406*3473
+			  });
+      }
+
+      Object.assign(obj, {[nam]: val});
+		  console.log(this.state.acompagnante[0]);
+	  }
+	  
+	  render() {
+	    var formularioStyle = {
+		    padding: 23
+	    } 
+		  var buttonStyle = {
+		    padding: 15,
+		    width: "100%",
+		    marginBottom: 5
+	    }
+      var totalStyle = {
+		    background: '#b9f7b599',
+        fontWeight: "bold"
+	    }
+       var spanStyle = {
+		    color: 'green',
+        marginLeft: "5px"
+	    }
+      var totalStyle2 = {
+        background: '#d9e5f0',
+        fontWeight: "bold"
+      }
+		const { error, isLoaded, items, acompagnante, hash } = this.state;
+		if (error) {
+		  return <div><h3>{this.state.id} error</h3></div>;
+		} else if (!isLoaded) {
+		  return <div>Loading...</div>;
+		} else {
+		  return (
+			<form style={formularioStyle} onSubmit={this.mySubmitHandler}>
+				<div className="form-group">
+				  <h3>Calcular el costo de las transacciones en Ether</h3>
+				  <hr />
+           Aquí puedes calcular los costos de las transacciones en Ethereum.
+				   {acompagnante.map(item2 => (
+         
+				   <div>
+            
+            <b>Costo transferencia de Ether (gas)</b> 
+            <input type="text"
+            name="gas" 
+            defaultValue="this.state.gas"
+            value={this.state.gas}
+            onChange={this.myChangeHandler} className="form-control" />
+
+					  <b>Costo del gas 42, 49, 58 Gwei ( n * 10^-9 ETH )</b> 
+            <input type="text" 
+            name="gwei" 
+            defaultValue="this.state.gwei"
+            value={this.state.gwei}
+            onChange={this.myChangeHandler} className="form-control" />
+
+					  <b>Tarifa de transacción (ETH)</b>
+            <input type="text" 
+            name="eth" 
+            defaultValue={this.state.eth}
+            onChange={this.myChangeHandler}
+            className="form-control"
+            style={totalStyle2}
+            disabled/>
+
+            <b>Costo del ETH en $US</b>
+            <input type="text" 
+            name="costoeth" 
+            defaultValue="this.state.costoeth"
+            value={this.state.costoeth}
+            onChange={this.myChangeHandler} 
+            className="form-control"
+            disabled/>
+
+            <b>Tarifa transacción en $US </b>
+            <input type="text" 
+            name="tarifaus" 
+            defaultValue="this.state.tarifaus"
+            value={this.state.tarifaus}
+            onChange={this.myChangeHandler} className="form-control" 
+            style={totalStyle} 
+            disabled/>
+       
+            <input type="hidden" 
+            name="Current_state" 
+            defaultValue={item2.Current_state}
+            onChange={this.myChangeHandler} className="form-control" />
+
+            <b>Tarifa Transacción en $COP</b> 
+            <input type="text" 
+            name="tarifacop" 
+            defaultValue="this.state.tarifacop"
+            value={this.state.tarifacop}
+            onChange={this.myChangeHandler} className="form-control" 
+            style={totalStyle} 
+            disabled />
+            
+				   </div>
+       
+				  ))}<br/>
+				</div>
+				<hr />
+			 </form>
+		  );
+		} 
+	  }// end render
+		
+	} // end class
+	
+	ReactDOM.render(
+	  <div>
+		<ExternalData />
+	  </div>,
+	  document.querySelector("#container")
+	);  
+  </script>
+</body>
+
+</html>
