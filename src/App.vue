@@ -12,7 +12,7 @@
             </h2>
             <hr/>
             <p class="subheading font-weight-regular">
-              Utiliza Ethereum para crowdfunding descentralizado<br><br> 
+              Utiliza Ethereum para crowdfunding descentralizado y aprende la dinámica de los criptoactivos<br><br> 
               Instala tu billetera <a href="https://metamask.io" target="_blank">Metamask (Extension Google Chrome)</a> y solicita algunos Eths de prueba<br>
               en <a href="https://faucet.metamask.io/" target="_blank">faucet.metamask.io</a> para realizar tu donación o crear tu propio proyecto en la Testnet Ropsten.  
             </p>
@@ -218,7 +218,7 @@
             <v-btn slot="activator" color="blue darken-1" dark>Motivación 😀🌱🥳 </v-btn>                     
             <v-card>
               <v-card-title>
-                <span class="headline font-weight-bold mt-2 ml-4">¿Por qué una aplicación de crowdfunding para 🦜 Latinoamerica? </span>
+                <span class="headline font-weight-bold mt-2 ml-4">¿Por qué una aplicación de crowdfunding para Latinoamerica? </span>
               </v-card-title>
               <v-card-text class="pt-0">
                 <v-container class="pt-0" grid-list-md>
