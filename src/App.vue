@@ -1,4 +1,4 @@
-o<template>
+<template>
   <v-app class="grey lighten-3">
     <v-content>
       <v-container>
