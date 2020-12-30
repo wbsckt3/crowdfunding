@@ -13,9 +13,8 @@
             <hr/>
             <p class="subheading font-weight-regular">
               Utiliza Ethereum para crowdfunding descentralizado<br><br> 
-              Instala tu billetera <a href="https://metamask.io" target="_blank">Metamask (Extension Google Chrome)</a> y solicita algo de 
-              Ether en <a href="https://faucet.metamask.io/" target="_blank"> faucet.metamask.io</a> para realizar tu donación<br> o crear tu propio proyecto 
-              en la Testnet Ropsten.  
+              Instala tu billetera <a href="https://metamask.io" target="_blank">Metamask (Extension Google Chrome)</a> y solicita algunos Eths de prueba<br>
+              en <a href="https://faucet.metamask.io/" target="_blank">faucet.metamask.io</a> para realizar tu donación o crear tu propio proyecto en la Testnet Ropsten.  
             </p>
           </v-flex>
         </v-layout>
