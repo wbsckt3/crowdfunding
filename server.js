@@ -3,5 +3,10 @@ const serveStatic = require("serve-static")
 const path = require('path');
 app = express();
 app.use(serveStatic(path.join(__dirname, 'dist')));
+
+app.get('/ethmath', function (req, res) {
+  res.sendFile(__dirname + '/ethmath.html');
+});
+
 const port = process.env.PORT || 80;
 app.listen(port);
