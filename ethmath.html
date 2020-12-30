@@ -110,14 +110,7 @@
 		  
 		  var ciphertext = CryptoJS.AES.encrypt(ct, 'secret key 123').toString();
 		  var ct = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(ciphertext));
-		  axios({
-			method: 'post',
-			url: 'https://wbsckt.herokuapp.com/crearusuario',
-			data: 'usu=ale&pass='+ ct,
-			headers: {
-			  'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
-			}
-		  })
+		  
 
 		  let nam = '_id';         let val  = ""; Object.assign(obj, {[nam]:  val}); // excluimos el _id del envío
 		  let nam2 = '_createdOn'; let val2 = ""; Object.assign(obj, {[nam2]: val2}); // excluimos el _createdOn del envío
