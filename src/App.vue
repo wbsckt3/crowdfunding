@@ -198,21 +198,24 @@ o<template>
         >
           <v-flex mb-4>                       
             <p class="subheading font-weight-regular">
-             Los emprendedores no pueden financiar su propio proyecto, es por este motivo que al momento de crear tu proyecto 
-             no puedes donar ETH al mismo.
+             - Los emprendedores no pueden financiar su propio proyecto, es por este motivo que al momento de crear tu proyecto 
+             no puedes donar ETH al mismo.<br>
+             - Las transacciones a través de tu billetera en Metamask las puedes realizar en la testnet Ropsten lo que significa
+             que estas no tienen un costo real.
+            </p>
+            <p>
+             <a href="https://ethproxy.herokuapp.com/ethmath" target="_blank">Calcúla el costo de las transacciones en Ethereum</a>
+             |
+             <a href="https://ethereum.org/es/" target="_blank">Asesoria personalizada</a>
+             |
+             <a href="https://ethereum.org/es/" target="_blank">Aprende más sobre Ethereum y arquitecturas web descentralizadas</a>
             </p>
           </v-flex>
         </v-layout> 
         
         <v-layout row justify-left>
           <v-dialog v-model="startProjectDialog2" max-width="600px" persistent>
-            <v-btn slot="activator" color="blue darken-1" dark>Motivación 😀🌱🥳 </v-btn>
-             <a href="https://ethereum.org/es/" target="_blank">Aprende más sobre Ethereum y arquitecturas web descentralizadas</a>
-             |
-             <a href="https://ethereum.org/es/" target="_blank">Matemáticas financieras para Ethereum</a>
-             |
-             <a href="https://ethereum.org/es/" target="_blank">Asesoria personalizada</a>
-             
+            <v-btn slot="activator" color="blue darken-1" dark>Motivación 😀🌱🥳 </v-btn>                     
             <v-card>
               <v-card-title>
                 <span class="headline font-weight-bold mt-2 ml-4">¿Por qué una aplicación de crowdfunding para 🦜 Latinoamerica? </span>
