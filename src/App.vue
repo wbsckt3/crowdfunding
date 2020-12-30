@@ -7,7 +7,7 @@
           wrap
         >
           <v-flex mb-4>
-            <h2 class="">
+            <h2 class="" style="background: #adff2f69">
                EthProxy 🌱 | Latam Crowdfunding 
             </h2>
             <hr/>
