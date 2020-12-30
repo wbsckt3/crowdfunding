@@ -200,8 +200,8 @@
             <p class="subheading font-weight-regular">
              - Los emprendedores no pueden financiar su propio proyecto, es por este motivo que al momento de crear tu proyecto 
              no puedes donar ETH al mismo.<br>
-             - Las transacciones a través de tu billetera en Metamask las puedes realizar en la testnet Ropsten lo que significa
-             que estas no tienen un costo real.
+             - Las transacciones a través de tu billetera en Metamask las puedes realizar en la red Ropsten (TestNet) lo que significa
+             que estas no tienen incidencia en la red productiva de Ethereum (MainNet).
             </p>
             <p>
              <a href="https://ethproxy.herokuapp.com/ethmath" target="_blank">Calcúla el costo de las transacciones en Ethereum</a>
