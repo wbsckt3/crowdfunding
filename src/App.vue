@@ -128,6 +128,11 @@
                       {{ project.projectTitle }}
                     </div>
                     <br/>
+                     <span><b>Cuenta que crea el proyecto:</b> {{ project.projectStarter }} </span>
+                    <br/>
+                      <span><b>Contrato del proyecto:</b> {{ project.contract._address }}</span>
+                    <br/><br/>
+                    <br/>
                     <span>{{ project.projectDesc.substring(0, 100) }}</span>
                     <span v-if="project.projectDesc.length > 100">
                       ... <a @click="projectData[index].dialog = true">[Show full]</a>
