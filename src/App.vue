@@ -201,16 +201,20 @@
           wrap
         >
           <v-flex mb-4>                       
-            
+            <p><a href="https://defimath.herokuapp.com" target="_blank">Calcúla el costo de las transacciones en Ethereum</a> | 
+            <a href="https://metamask.io" target="_blank">Obtener Metamask | billetera digital (Extension para Chrome o Firefox)</a> |
+            <a href="https://faucet.ropsten.be/" target="_blank">Obtener ethers de pruebaen un grifo | faucet.ropsten.be </a> |                                                      
+            <a href="https://www.buda.com" target="_blank">www.buda.com | Banco de criptoactivos latinoamérica SurBTC</a> |                   
+            <a href="https://ropsten.etherscan.io/address/0x15d88d19b7aab3fcbf9e721fd64f9de14c98c61b" target="_blank"> 
+                      Etherscan | Visualizar Transacciones sobre los contratos o desde cuentas públicas</a> |                    
+                      <a href="https://gobiernodigital.mintic.gov.co/692/articles-161810_Ley_2052_2020.pdf" target="_blank">Guía adopción de proyectos sobre Blockchain para Colombia</a>
+            </p>
           </v-flex>
         </v-layout> 
         
         <v-layout row justify-left style="background: #cad6da">
           <v-dialog v-model="startProjectDialog2" max-width="1000px" persistent>
             <v-btn slot="activator" color="blue darken-1" dark>Generalidades</v-btn>
-            <router-link :to="https://defimath.herokuapp.com" target="_blank"> Link Text </router-link>
-            <p><a href="https://defimath.herokuapp.com" target="_blank">Calcúla el costo de las transacciones en Ethereum</a> | 
-            <a href="https://metamask.io" target="_blank">Obtener Metamask | billetera digital (Extension para Chrome o Firefox)</a> </p>
             <v-card>
               <v-card-title>                
                 <p class="subheading font-weight-regular">
@@ -248,29 +252,7 @@
                   </v-layout>
                 </v-container>
               </v-card-text>
-              
-              <v-card-title>                
-                <p class="subheading font-weight-regular">
-                   <span class="headline font-weight-bold mt-2 ml-4">Links</span>
-                </p>
-              </v-card-title>
-              
-               <v-card-text class="pt-0">
-                <v-container class="pt-0" grid-list-md>
-                  <v-layout wrap>
-                      
-                      <a href="https://faucet.ropsten.be/" target="_blank">Obtener ethers de pruebaen un grifo | faucet.ropsten.be </a>
-                      <br/>                                                      
-                      <a href="https://www.buda.com" target="_blank">www.buda.com | Banco de criptoactivos latinoamérica SurBTC</a>
-                      <br/>                    
-                      <a href="https://ropsten.etherscan.io/address/0x15d88d19b7aab3fcbf9e721fd64f9de14c98c61b" target="_blank">
-                      Etherscan | Visualizar Transacciones sobre los contratos o desde cuentas públicas</a>
-                      <br/>                    
-                      <a href="https://gobiernodigital.mintic.gov.co/692/articles-161810_Ley_2052_2020.pdf" target="_blank">Guía adopción de proyectos sobre Blockchain para Colombia</a>
-                  </v-layout>
-                </v-container>
-              </v-card-text>
-              
+  
               <v-card-actions>
                 <v-spacer></v-spacer>
                 
