@@ -8,7 +8,7 @@
         >
           <v-flex mb-4>
             <h2 class="" style="margin-top: -20px; padding-top: 20px;">
-               Eth Proxy 🌱 | Prototipo funcional Dapp para contratos inteligentes en Ethereum  
+               Eth Proxy 🌱 | Prototipo funcional de aplicación descentralizada para contratos inteligentes en Ethereum  
             </h2>
             <hr/>
             <p class="subheading font-weight-regular"> 
