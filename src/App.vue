@@ -225,28 +225,33 @@
                    
                    Las transacciones a través de la billetera Metamask se realizan libremente en la red Ropsten (TestNet) con Ether de prueba
                    lo que significa que estas no tienen incidencia en la red productiva de Ethereum (MainNet) con Ether real. <br><br>
-                          
-                   <a href="https://defimath.herokuapp.com" target="_blank">Calcúla el costo de las transacciones en Ethereum</a> <br><br>
-               
+                                                   
                     - Todo request desde y hacia Ethereum es una transacción<br>
                     - Visualizar las transacciones que generaron los bloques (GET) desde las dirección públicas (billetera) es gratuito en ropsten.etherscan.io<br>
                     - Visualizar el contenido de los bloques (GET) es gratuito y privado por pertenencia del contrato contenedor,<br>
                     - Generar un contrato contenedor (POST) y generar bloques dependientes de ese contrato tiene costo,
                     - No es posible modificar o eliminar los contratos generados i.e. los bloques.<hr/>
                     
-                    - Esta Dapp (Aplicación descentralizada sin base de datos) utiliza contratos inteligentes con Solidity para generar bloques sobre el blockchain de Ethereum en una Testnet<br><br> 
-                    - Para realizar transacciones en una testnet (Mainnet es la red principal de Ethereum) se requiere una dirección blockchain pública (semejante a una cuenta de banco) y una semilla privada
+                      Esta Dapp (Aplicación descentralizada sin base de datos) utiliza contratos inteligentes con Solidity para generar bloques sobre el blockchain de Ethereum en una Testnet<br><br> 
+                      
+                      Para realizar transacciones en una testnet (Mainnet es la red principal de Ethereum) se requiere una dirección blockchain pública (semejante a una cuenta de banco) y una semilla privada
                       en el navegador del usuario (una billetera): Instalar una en tu navegador<a href="https://metamask.io" target="_blank">Metamask (Extension para Chrome o Firefox)</a>
-                     - Solicitar Eths de prueba en <a href="https://faucet.ropsten.be/" target="_blank">faucet.ropsten.be</a> para crear un bloque o consignar a uno en la Testnet Ropsten. 
-                      (Se puede obtener un ETH de prueba cada 24 horas desde la Ip del navegador).<br><br>
-                    - En <a href="https://defimath.herokuapp.com" target="_blank">Calculadora para ETH</a> puedes calcular los costos de las transacciones.<br><br>
-                    - Para comprar ETH real <a href="https://www.buda.com" target="_blank">Banco digital de criptoactivos</a> de una compañia llamada surBTC basada en Chile
-                      (activa en Chile, Perú, Argentina y Colombia).<br><br>
-                    - Para revisar las transacciones directamente en la cadena de bloques está 
-                      <a href="https://ropsten.etherscan.io/address/0x15d88d19b7aab3fcbf9e721fd64f9de14c98c61b">
-                      https://ropsten.etherscan.io/address/0x15d88D19b7aAB3Fcbf9e721Fd64f9de14C98c61B 
-                      </a> (Este es el contrato contenedor generado en el deploy y al cual se agregan los demás bloques)<br><br>
-                    - <a href="https://gobiernodigital.mintic.gov.co/692/articles-161810_Ley_2052_2020.pdf" target="_blank">Guía adopción de proyectos sobre Blockchain para Colombia</a>
+                     
+                      Solicitar Eths de prueba en <a href="https://faucet.ropsten.be/" target="_blank">faucet.ropsten.be</a> para crear un bloque o consignar a uno en la Testnet Ropsten. 
+                      (Se puede obtener un ETH de prueba cada 24 horas desde la Ip del navegador).<br><br>                                       
+                      
+                      <a href="https://defimath.herokuapp.com" target="_blank">Calcúla el costo de las transacciones en Ethereum</a> <br><br>
+                      
+                      Para comprar ETH real existe www.buda.com, primer Banco digital de criptoactivos</a> de una compañia llamada surBTC basada en Chile
+                      (activa en Chile, Perú, Argentina y Colombia).<br><br>  
+                      
+                      <a href="https://www.buda.com" target="_blank"><br><br>
+                      
+                      <a href="https://ropsten.etherscan.io/address/0x15d88d19b7aab3fcbf9e721fd64f9de14c98c61b" target="_blank">
+                      Visualizar Transacciones desde cuentas públicas 
+                      </a> <br><br>
+                      
+                      <a href="https://gobiernodigital.mintic.gov.co/692/articles-161810_Ley_2052_2020.pdf" target="_blank">Guía adopción de proyectos sobre Blockchain para Colombia</a>
                
             
                   </v-layout>
