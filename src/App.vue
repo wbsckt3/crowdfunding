@@ -220,43 +220,38 @@
                 <v-container class="pt-0" grid-list-md>
                   <v-layout wrap>
                   
+                    - Todo request desde y hacia Ethereum es una transacción<br>
+                    - Visualizar las transacciones que generaron los bloques (GET) desde las dirección públicas (billetera) es gratuito en ropsten.etherscan.io<br>
+                    - Visualizar el contenido de los bloques (GET) es gratuito y privado por pertenencia del contrato contenedor<br>
+                    - Generar un contrato contenedor (POST) y generar bloques dependientes de ese contrato tiene costo<br>
+                    - No es posible modificar o eliminar los contratos generados i.e. los bloques<br>
+                  
                    El navegador que crea un bloque no puede financiar su propio bloque, es por este motivo que al momento de crear tu proyecto 
                    no puedes consignar Ether al mismo.<br><br>
                    
                    Esta Dapp (Aplicación descentralizada sin base de datos) utiliza contratos inteligentes con Solidity para generar bloques sobre el blockchain de Ethereum en una Testnet<br><br> 
                                       
                    Las transacciones a través de la billetera Metamask se realizan libremente en la red Ropsten (TestNet) con Ether de prueba
-                   lo que significa que estas no tienen incidencia en la red productiva de Ethereum (MainNet) con Ether real. <br><br>
-                                                   
-                    - Todo request desde y hacia Ethereum es una transacción<br>
-                    - Visualizar las transacciones que generaron los bloques (GET) desde las dirección públicas (billetera) es gratuito en ropsten.etherscan.io<br>
-                    - Visualizar el contenido de los bloques (GET) es gratuito y privado por pertenencia del contrato contenedor<br>
-                    - Generar un contrato contenedor (POST) y generar bloques dependientes de ese contrato tiene costo<br>
-                    - No es posible modificar o eliminar los contratos generados i.e. los bloques
+                   lo que significa que estas no tienen incidencia en la red productiva de Ethereum (MainNet) con Ether real. <br><br>                                                                   
                                          
                       Para realizar transacciones en una testnet se requiere una dirección blockchain pública (semejante a una cuenta de banco) y una semilla privada
                       en el navegador del usuario (una billetera)<br><br>
                       
                       Solicitar Eths de prueba en un grifo de Ether gratis como faucet.ropsten.be para crear un bloque o consignar a uno en la Testnet Ropsten. 
-                      (Se puede obtener un ETH de prueba cada 24 horas desde la Ip del navegador).<br><br>                                       
-                      
-                      <a href="https://defimath.herokuapp.com" target="_blank">Calcúla el costo de las transacciones en Ethereum</a> <br>
+                      (Se puede obtener un ETH de prueba cada 24 horas desde la Ip del navegador).<br><br>                                                            
                       
                       Para comprar ETH real existe www.buda.com, primer Banco digital de criptoactivos</a> de una compañia llamada surBTC basada en Chile
                       (activa en Chile, Perú, Argentina y Colombia). <br><br>  
                       
-                      <a href="https://faucet.ropsten.be/" target="_blank">faucet.ropsten.be | Grifo de Ether</a> <br><br>
+                      <span class="headline font-weight-bold mt-2 ml-4">Links:</span>
                       
-                      <a href="https://metamask.io" target="_blank">Metamask | billetera digital (Extension para Chrome o Firefox)</a> <br><br> 
-                                          
-                      <a href="https://www.buda.com" target="_blank">www.buda.com | Banco de criptoactivos latinoamérica SurBTC</a> <br><br>
-                      
+                      <a href="https://defimath.herokuapp.com" target="_blank">Calcúla el costo de las transacciones en Ethereum</a> <br>
+                      <a href="https://metamask.io" target="_blank">Obtener Metamask | billetera digital (Extension para Chrome o Firefox)</a> <br>  
+                      <a href="https://faucet.ropsten.be/" target="_blank">Obtener ethers de pruebaen un grifo | faucet.ropsten.be </a> <br>                                                        
+                      <a href="https://www.buda.com" target="_blank">www.buda.com | Banco de criptoactivos latinoamérica SurBTC</a> <br><br>                     
                       <a href="https://ropsten.etherscan.io/address/0x15d88d19b7aab3fcbf9e721fd64f9de14c98c61b" target="_blank">
-                      Etherscan | Visualizar Transacciones sobre los contratos o desde cuentas públicas 
-                      </a> <br><br>
-                      
-                      <a href="https://gobiernodigital.mintic.gov.co/692/articles-161810_Ley_2052_2020.pdf" target="_blank">Guía adopción de proyectos sobre Blockchain para Colombia</a>
-               
+                      Etherscan | Visualizar Transacciones sobre los contratos o desde cuentas públicas</a> <br>                     
+                      <a href="https://gobiernodigital.mintic.gov.co/692/articles-161810_Ley_2052_2020.pdf" target="_blank">Guía adopción de proyectos sobre Blockchain para Colombia</a>     
             
                   </v-layout>
                 </v-container>
