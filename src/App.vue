@@ -133,7 +133,7 @@
         
         <v-layout row justify-center>
           <v-dialog v-model="startProjectDialog" max-width="600px" persistent>
-            <v-btn slot="activator" color="primary" dark>Generar un nuevo bloque a partir el contrato contenedor</v-btn>
+            <v-btn slot="activator" color="primary" dark>Generar un nuevo bloque a partir del contrato contenedor</v-btn>
             <v-card>
               <v-card-title>
                 <span class="headline font-weight-bold mt-2 ml-4">Genera un nuevo bloque</span>
