@@ -97,7 +97,7 @@
                     @click="fundProject(index)"
                     :loading="project.isLoading"
                   >
-                    Transferir (ETH)
+                    Transferir
                   </v-btn>
                 </v-flex>
                 <v-flex class="d-flex ml-3" xs12 sm6 md3>
