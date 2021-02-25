@@ -200,7 +200,7 @@
           text-xs-center
           wrap
         >
-          <v-flex mb-4>                       
+          <v-flex mb-4>   <hr/>                    
             <p><a href="https://defimath.herokuapp.com" target="_blank">Calcúla el costo de las transacciones en Ethereum</a> <br> 
             <a href="https://metamask.io" target="_blank">Obtener Metamask | billetera digital (Extension para Chrome o Firefox)</a> <br>
             <a href="https://faucet.ropsten.be/" target="_blank">Obtener ethers de pruebaen un grifo | faucet.ropsten.be </a> <br>                                                      
@@ -208,7 +208,7 @@
             <a href="https://ropsten.etherscan.io/address/0x15d88d19b7aab3fcbf9e721fd64f9de14c98c61b" target="_blank">
                       Etherscan | Visualizar Transacciones sobre los contratos o desde cuentas públicas</a> <br>                    
             <a href="https://gobiernodigital.mintic.gov.co/692/articles-161810_Ley_2052_2020.pdf" target="_blank">Guía adopción de proyectos sobre Blockchain para Colombia</a>
-            </p>
+            </p>  <hr/>
           </v-flex>
         </v-layout> 
         
