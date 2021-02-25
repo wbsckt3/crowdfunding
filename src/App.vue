@@ -207,18 +207,20 @@
         
         <v-layout row justify-left style="background: #cad6da">
           <v-dialog v-model="startProjectDialog2" max-width="1000px" persistent>
-            <v-btn slot="activator" color="blue darken-1" dark>Generalidades y enlaces de interés</v-btn>                     
-            <v-card>
-              <v-card-title>                
-                <p class="subheading font-weight-regular">
-                   <span class="headline font-weight-bold mt-2 ml-4">Generalidades</span>
+            <v-btn slot="activator" color="blue darken-1" dark>Generalidades y enlaces de interés</v-btn>
+                <span class="headline font-weight-bold mt-2 ml-4">Generalidades</span>
                    - El navegador que crea un bloque no puede financiar su propio bloque, es por este motivo que al momento de crear tu proyecto 
                    no puedes consignar Ether al mismo.<br>
                    - Las transacciones a través de tu billetera en Metamask las puedes realizar en la red Ropsten (TestNet) lo que significa
                    que estas no tienen incidencia en la red productiva de Ethereum (MainNet).
-                </p>
-                <p>
+          
+                
                  <a href="https://defimath.herokuapp.com" target="_blank">Calcúla el costo de las transacciones en Ethereum</a>
+                
+            <v-card>
+              <v-card-title>                
+                <p class="subheading font-weight-regular">
+                   <span class="headline font-weight-bold mt-2 ml-4">Generalidades</span>
                 </p>
              </v-card-title>
               
@@ -227,7 +229,7 @@
                   <v-layout wrap>
                   
                     - Todo request desde y hacia Ethereum es una transacción<br>
-                    - Visualizar las transacciones que generaron los bloques (GET) desde las dirección públicas (billetera) es gratuito (<a href="https://ropsten.etherscan.io/address/..." target="_blank">ropsten.etherscan.io</a>)<br>
+                    - Visualizar las transacciones que generaron los bloques (GET) desde las dirección públicas (billetera) es gratuito <a href="https://ropsten.etherscan.io/address/..." target="_blank">ropsten.etherscan.io</a><br>
                     - Visualizar el contenido de los bloques (GET) es gratuito y privado por pertenencia del contrato contenedor,<br>
                     - Generar un contrato contenedor (POST) y generar bloques dependientes de ese contrato tiene costo,
                     - No es posible modificar o eliminar los contratos generados i.e. los bloques.<hr/>
