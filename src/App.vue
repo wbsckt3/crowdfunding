@@ -201,7 +201,7 @@
           wrap
         >
           <v-flex mb-4>                       
-            <p><a href="https://defimath.herokuapp.com" target="_blank">Calcúla el costo de las transacciones en Ethereum</a> | 
+            <p><a href="https://defimath.herokuapp.com" target="_blank">Calcúla el costo de las transacciones en Ethereum</a> <br> 
             <a href="https://metamask.io" target="_blank">Obtener Metamask | billetera digital (Extension para Chrome o Firefox)</a> |
             <a href="https://faucet.ropsten.be/" target="_blank">Obtener ethers de pruebaen un grifo | faucet.ropsten.be </a> |                                                      
             <a href="https://www.buda.com" target="_blank">www.buda.com | Banco de criptoactivos latinoamérica SurBTC</a> |                   
