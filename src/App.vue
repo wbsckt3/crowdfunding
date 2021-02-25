@@ -208,6 +208,7 @@
         <v-layout row justify-left style="background: #cad6da">
           <v-dialog v-model="startProjectDialog2" max-width="1000px" persistent>
             <v-btn slot="activator" color="blue darken-1" dark>Generalidades</v-btn>
+            <router-link :to="https://defimath.herokuapp.com" target="_blank"> Link Text </router-link>
             <p><a href="https://defimath.herokuapp.com" target="_blank">Calcúla el costo de las transacciones en Ethereum</a> | 
             <a href="https://metamask.io" target="_blank">Obtener Metamask | billetera digital (Extension para Chrome o Firefox)</a> </p>
             <v-card>
