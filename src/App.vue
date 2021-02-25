@@ -18,10 +18,10 @@
 
         <v-layout row justify-center>
           <v-dialog v-model="startProjectDialog" max-width="600px" persistent>
-            <v-btn slot="activator" color="primary" dark>Genera un bloque</v-btn>
+            <v-btn slot="activator" color="primary" dark>Genera un nuevo bloque en el contrato contenedor 0x8CfAc34881D1ceFc125e87EaB1Cd95d6Ca3fd789</v-btn>
             <v-card>
               <v-card-title>
-                <span class="headline font-weight-bold mt-2 ml-4">Emprende tu proyecto</span>
+                <span class="headline font-weight-bold mt-2 ml-4">Genera un nuevo bloque</span>
               </v-card-title>
               <v-card-text class="pt-0">
                 <v-container class="pt-0" grid-list-md>
@@ -84,9 +84,9 @@
       <v-container
         grid-list-lg
       >
-        <h2 class="" style="margin-top: -75px;">
-          Proyectos en curso
-        </h2>
+        <h3 class="" style="margin-top: -75px;">
+         Bloques generados a partir del contrato contenedor : <b>0x8CfAc34881D1ceFc125e87EaB1Cd95d6Ca3fd789</b>
+        </h3>
         <v-layout row wrap>
           <v-flex v-for="(project, index) in projectData" :key="index" xs12>
             <v-dialog
@@ -107,7 +107,7 @@
                     flat="flat"
                     @click="projectData[index].dialog = false"
                   >
-                    Close
+                    Cerrar
                   </v-btn>
                 </v-card-actions>
               </v-card>
@@ -129,20 +129,20 @@
                       {{ project.projectTitle }}
                     </div>
                     <br/>
-                     <span><b>Cuenta que crea el proyecto:</b> {{ project.projectStarter }} </span>
+                     <span><b>Cuenta que crea el bloque:</b> {{ project.projectStarter }} </span>
                     <br/>
-                      <span><b>Contrato del proyecto:</b> {{ project.contract._address }}</span>
+                      <span><b>Contrato del bloque:</b> {{ project.contract._address }}</span>
                     <br/><br/>
                     <span>{{ project.projectDesc.substring(0, 100) }}</span>
                     <span v-if="project.projectDesc.length > 100">
                       ... <a @click="projectData[index].dialog = true">[Show full]</a>
                     </span>
                     <br/><br/>
-                    <small>Disponible hasta: <b>{{ new Date(project.deadline * 1000) }}</b></small>
+                    <small>Licitación disponible hasta: <b>{{ new Date(project.deadline * 1000) }}</b></small>
                     <br/><br/>
                     <small>Meta: <b>{{ project.goalAmount / 10**18 }} ETH </b></small>
-                    <small v-if="project.currentState == 1">wasn't achieved before deadline</small>
-                    <small v-if="project.currentState == 2">has been achieved</small>
+                    <small v-if="project.currentState == 1">Esta licitación no se logró antes de la fecha límite por tal motivo los fondos retornan a sus aportantes</small>
+                    <small v-if="project.currentState == 2">Esta licitación logró recaudar los fondos necesarios</small>
                   </div>
                 </v-card-title>
                 <v-flex
@@ -199,38 +199,43 @@
         >
           <v-flex mb-4>                       
             <p class="subheading font-weight-regular">
-             - Los emprendedores no pueden financiar su propio proyecto, es por este motivo que al momento de crear tu proyecto 
+             - El navegador que crea un bloque no puede financiar su propio bloque, es por este motivo que al momento de crear tu proyecto 
              no puedes donar ETH al mismo.<br>
              - Las transacciones a través de tu billetera en Metamask las puedes realizar en la red Ropsten (TestNet) lo que significa
              que estas no tienen incidencia en la red productiva de Ethereum (MainNet).
             </p>
             <p>
              <a href="https://defimath.herokuapp.com" target="_blank">Calcúla el costo de las transacciones en Ethereum</a>
-             |
-             <a href="https://ethereum.org/es/" target="_blank">Asesoria personalizada</a>
-             |
-             <a href="https://ethereum.org/es/" target="_blank">Aprende más sobre Ethereum y arquitecturas web descentralizadas</a>
             </p>
           </v-flex>
         </v-layout> 
         
         <v-layout row justify-left style="background: #d3f59f">
           <v-dialog v-model="startProjectDialog2" max-width="600px" persistent>
-            <v-btn slot="activator" color="blue darken-1" dark>Motivación 😀🌱🥳 </v-btn>                     
+            <v-btn slot="activator" color="blue darken-1" dark>Generalidades y enlaces de interés</v-btn>                     
             <v-card>
               <v-card-title>
-                <span class="headline font-weight-bold mt-2 ml-4">¿Por qué una aplicación de crowdfunding para Latinoamerica? </span>
+                <span class="headline font-weight-bold mt-2 ml-4">Generalidades</span>
               </v-card-title>
               <v-card-text class="pt-0">
                 <v-container class="pt-0" grid-list-md>
                   <v-layout wrap>
                   
-            Las grandes ideas necesitan esfuerzo y financiación. Puede solicitar donaciones o inversores, pero los donantes, por supuesto, preferirían donar a proyectos en los que tienen algún tipo de certeza de que el proyecto realmente va a alguna parte.
-            Aquí es donde entra en juego el crowdfunding, una configuración ideal en la que puede especificar su objetivo y una fecha límite para alcanzarlo. Si no cumple con su objetivo, las donaciones se devuelven, lo que reduce el riesgo para los donantes.
-            Las plataformas existentes son todas geniales, pero en cada proyecto completado o en cada donación enviada, la plataforma toma un cierto porcentaje (margen) que podría, en ocasiones, ser demasiado alto para los emprendedores. 
-            Es más, dependemos en gran medida de ellos como la tercera parte que nos conecta con los donantes. Si fracasan ellos, también nosotros estaremos en problemas.
-            Con una configuración descentralizada, podemos tener una plataforma que no requiere de confianza entre las partes (en lo que se basa el sistema financiero tradicional), por lo tanto, las únicas tarifas que todos pagarán son solo las tarifas del gas
-            <br/><br/><a href="https://defimath.herokuapp.com" target="_blank">Aprende más sobre Ethereum y arquitecturas web descentralizadas</a>
+            - Todo en Ethereum es una transacción, GET de bloques es gratis, Agregar un bloque cuesta Gas, No es posible modificar o borrar bloques.<br><br>
+                    - Esta Dapp (Aplicación descentralizada i.e. sin base de datos) utiliza contratos inteligentes en Solidity para generar bloques sobre el blockchain de Ethereum<br><br> 
+                    - Para realizar transacciones en una testnet (Mainnet es la red principal de Ethereum) se requiere una dirección blockchain (semejante a una cuenta de banco) y una billetera: 
+                      Instalar una en tu navegador<a href="https://metamask.io" target="_blank">Metamask (Extension para Chrome o Firefox)</a> y solicita algunos Eths de prueba
+                      en <a href="https://faucet.ropsten.be/" target="_blank">faucet.ropsten.be</a> para crear tu bloque o aportar a un contrato en la Testnet Ropsten. 
+                      (Se puede obtener un ETH de prueba cada 24 horas desde la Ip del navegador).<br><br>
+                    - En <a href="https://defimath.herokuapp.com" target="_blank">Calculadora para ETH</a> puedes calcular los costos de las transacciones.<br><br>
+                    - Para comprar ETH real <a href="https://www.buda.com" target="_blank">Banco digital de criptoactivos</a> de una compañia llamada surBTC basada en Chile
+                      (activa en Chile, Perú, Argentina y Colombia).<br><br>
+                    - Para revisar las transacciones directamente en la cadena de bloques está 
+                      <a href="https://ropsten.etherscan.io/address/0x15d88d19b7aab3fcbf9e721fd64f9de14c98c61b">
+                      https://ropsten.etherscan.io/address/0x15d88D19b7aAB3Fcbf9e721Fd64f9de14C98c61B 
+                      </a> (Este es el contrato contenedor generado en el deploy y al cual se agregan los demás bloques)<br><br>
+                    - <a href="https://gobiernodigital.mintic.gov.co/692/articles-161810_Ley_2052_2020.pdf" target="_blank">Guía adopción de proyectos sobre Blockchain para Colombia</a>
+               
             
                   </v-layout>
                 </v-container>
@@ -267,7 +272,7 @@ export default {
       account: null,
       stateMap: [
         { color: 'primary', text: 'En curso' },
-        { color: 'warning', text: 'Expired' },
+        { color: 'warning', text: 'Expirado' },
         { color: 'success', text: 'Completed' },
       ],
       projectData: [],
