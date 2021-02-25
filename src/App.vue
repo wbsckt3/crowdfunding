@@ -202,17 +202,18 @@
         >
           <v-flex mb-4>                       
             <p><a href="https://defimath.herokuapp.com" target="_blank">Calcúla el costo de las transacciones en Ethereum</a> <br> 
-            <a href="https://metamask.io" target="_blank">Obtener Metamask | billetera digital (Extension para Chrome o Firefox)</a> |
-            <a href="https://faucet.ropsten.be/" target="_blank">Obtener ethers de pruebaen un grifo | faucet.ropsten.be </a> |                                                      
-            <a href="https://www.buda.com" target="_blank">www.buda.com | Banco de criptoactivos latinoamérica SurBTC</a> |                   
-            <a href="https://ropsten.etherscan.io/address/0x15d88d19b7aab3fcbf9e721fd64f9de14c98c61b" target="_blank"> 
-                      Etherscan | Visualizar Transacciones sobre los contratos o desde cuentas públicas</a> |                    
-                      <a href="https://gobiernodigital.mintic.gov.co/692/articles-161810_Ley_2052_2020.pdf" target="_blank">Guía adopción de proyectos sobre Blockchain para Colombia</a>
+            <a href="https://metamask.io" target="_blank">Obtener Metamask | billetera digital (Extension para Chrome o Firefox)</a> <br>
+            <a href="https://faucet.ropsten.be/" target="_blank">Obtener ethers de pruebaen un grifo | faucet.ropsten.be </a> <br>                                                      
+            <a href="https://www.buda.com" target="_blank">www.buda.com | Banco de criptoactivos latinoamérica SurBTC</a> <br>                   
+            <a href="https://ropsten.etherscan.io/address/0x15d88d19b7aab3fcbf9e721fd64f9de14c98c61b" target="_blank"> <br>
+                      Etherscan | Visualizar Transacciones sobre los contratos o desde cuentas públicas</a> <br>                    
+            <a href="https://gobiernodigital.mintic.gov.co/692/articles-161810_Ley_2052_2020.pdf" target="_blank">Guía adopción de proyectos sobre Blockchain para Colombia</a>
             </p>
           </v-flex>
         </v-layout> 
         
         <v-layout row justify-left style="background: #cad6da">
+          
           <v-dialog v-model="startProjectDialog2" max-width="1000px" persistent>
             <v-btn slot="activator" color="blue darken-1" dark>Generalidades</v-btn>
             <v-card>
@@ -264,6 +265,14 @@
               </v-card-actions>
             </v-card>
           </v-dialog>
+          <p><a href="https://defimath.herokuapp.com" target="_blank">Calcúla el costo de las transacciones en Ethereum</a> <br> 
+            <a href="https://metamask.io" target="_blank">Obtener Metamask | billetera digital (Extension para Chrome o Firefox)</a> <br>
+            <a href="https://faucet.ropsten.be/" target="_blank">Obtener ethers de pruebaen un grifo | faucet.ropsten.be </a> <br>                                                      
+            <a href="https://www.buda.com" target="_blank">www.buda.com | Banco de criptoactivos latinoamérica SurBTC</a> <br>                   
+            <a href="https://ropsten.etherscan.io/address/0x15d88d19b7aab3fcbf9e721fd64f9de14c98c61b" target="_blank">
+                      Etherscan | Visualizar Transacciones sobre los contratos o desde cuentas públicas</a> <br>                    
+            <a href="https://gobiernodigital.mintic.gov.co/692/articles-161810_Ley_2052_2020.pdf" target="_blank">Guía adopción de proyectos sobre Blockchain para Colombia</a>
+          </p>
         </v-layout>   
         
       </v-container>
