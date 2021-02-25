@@ -206,12 +206,12 @@
         </v-layout> 
         
         <v-layout row justify-left style="background: #cad6da">
-          <v-dialog v-model="startProjectDialog2" max-width="600px" persistent>
+          <v-dialog v-model="startProjectDialog2" max-width="1000px" persistent>
             <v-btn slot="activator" color="blue darken-1" dark>Generalidades y enlaces de interés</v-btn>                     
             <v-card>
-              <v-card-title>
-                <span class="headline font-weight-bold mt-2 ml-4">Generalidades</span>
+              <v-card-title>                
                 <p class="subheading font-weight-regular">
+                   <span class="headline font-weight-bold mt-2 ml-4">Generalidades</span>
                    - El navegador que crea un bloque no puede financiar su propio bloque, es por este motivo que al momento de crear tu proyecto 
                    no puedes consignar Ether al mismo.<br>
                    - Las transacciones a través de tu billetera en Metamask las puedes realizar en la red Ropsten (TestNet) lo que significa
@@ -220,16 +220,22 @@
                 <p>
                  <a href="https://defimath.herokuapp.com" target="_blank">Calcúla el costo de las transacciones en Ethereum</a>
                 </p>
-              </v-card-title>
+             </v-card-title>
+              
               <v-card-text class="pt-0">
                 <v-container class="pt-0" grid-list-md>
                   <v-layout wrap>
                   
-            - Todo en Ethereum es una transacción, GET de bloques es gratis, Agregar un bloque cuesta Gas, No es posible modificar o borrar bloques.<br><br>
-                    - Esta Dapp (Aplicación descentralizada i.e. sin base de datos) utiliza contratos inteligentes en Solidity para generar bloques sobre el blockchain de Ethereum<br><br> 
-                    - Para realizar transacciones en una testnet (Mainnet es la red principal de Ethereum) se requiere una dirección blockchain (semejante a una cuenta de banco) y una billetera: 
-                      Instalar una en tu navegador<a href="https://metamask.io" target="_blank">Metamask (Extension para Chrome o Firefox)</a> y solicita algunos Eths de prueba
-                      en <a href="https://faucet.ropsten.be/" target="_blank">faucet.ropsten.be</a> para crear tu bloque o aportar a un contrato en la Testnet Ropsten. 
+                    - Todo request desde y hacia Ethereum es una transacción<br>
+                    - Visualizar las transacciones que generaron los bloques (GET) desde las dirección públicas (billetera) es gratuito (<a href="https://ropsten.etherscan.io/address/..." target="_blank">ropsten.etherscan.io</a>)<br>
+                    - Visualizar el contenido de los bloques (GET) es gratuito y privado por pertenencia del contrato contenedor,<br>
+                    - Generar un contrato contenedor (POST) y generar bloques dependientes de ese contrato tiene costo,
+                    - No es posible modificar o eliminar los contratos generados i.e. los bloques.<hr/>
+                    
+                    - Esta Dapp (Aplicación descentralizada sin base de datos) utiliza contratos inteligentes con Solidity para generar bloques sobre el blockchain de Ethereum en una Testnet<br><br> 
+                    - Para realizar transacciones en una testnet (Mainnet es la red principal de Ethereum) se requiere una dirección blockchain pública (semejante a una cuenta de banco) y una semilla privada
+                      en el navegador del usuario (una billetera): Instalar una en tu navegador<a href="https://metamask.io" target="_blank">Metamask (Extension para Chrome o Firefox)</a>
+                     - Solicitar Eths de prueba en <a href="https://faucet.ropsten.be/" target="_blank">faucet.ropsten.be</a> para crear un bloque o consignar a uno en la Testnet Ropsten. 
                       (Se puede obtener un ETH de prueba cada 24 horas desde la Ip del navegador).<br><br>
                     - En <a href="https://defimath.herokuapp.com" target="_blank">Calculadora para ETH</a> puedes calcular los costos de las transacciones.<br><br>
                     - Para comprar ETH real <a href="https://www.buda.com" target="_blank">Banco digital de criptoactivos</a> de una compañia llamada surBTC basada en Chile
