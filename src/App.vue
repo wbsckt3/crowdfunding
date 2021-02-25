@@ -247,7 +247,7 @@
                 </v-container>
               </v-card-text>
               
-              v-card-title>                
+              <v-card-title>                
                 <p class="subheading font-weight-regular">
                    <span class="headline font-weight-bold mt-2 ml-4">Links</span>
                 </p>
