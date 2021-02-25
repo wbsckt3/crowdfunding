@@ -264,24 +264,7 @@ const abi = [
 		"name": "CreatorPaid",
 		"type": "event"
 	}
-]; // Your ABI goes here (Project contract)
-// Example:
-// const abi = [
-//   {
-//     "constant": true,
-//     "inputs": [],
-//     "name": "creator",
-//     "outputs": [
-//       {
-//         "name": "",
-//         "type": "address"
-//       }
-//     ],
-//     "payable": false,
-//     "stateMutability": "view",
-//     "type": "function"
-//   }
-// ];
+];
 
 export default (address) => {
   const instance = new web3.eth.Contract(abi, address);
