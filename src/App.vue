@@ -198,24 +198,25 @@
           wrap
         >
           <v-flex mb-4>                       
-            <p class="subheading font-weight-regular">
-             - El navegador que crea un bloque no puede financiar su propio bloque, es por este motivo que al momento de crear tu proyecto 
-             no puedes donar ETH al mismo.<br>
-             - Las transacciones a través de tu billetera en Metamask las puedes realizar en la red Ropsten (TestNet) lo que significa
-             que estas no tienen incidencia en la red productiva de Ethereum (MainNet).
-            </p>
-            <p>
-             <a href="https://defimath.herokuapp.com" target="_blank">Calcúla el costo de las transacciones en Ethereum</a>
-            </p>
+            
           </v-flex>
         </v-layout> 
         
-        <v-layout row justify-left style="background: #d3f59f">
+        <v-layout row justify-left style="background: #cad6da">
           <v-dialog v-model="startProjectDialog2" max-width="600px" persistent>
             <v-btn slot="activator" color="blue darken-1" dark>Generalidades y enlaces de interés</v-btn>                     
             <v-card>
               <v-card-title>
                 <span class="headline font-weight-bold mt-2 ml-4">Generalidades</span>
+                <p class="subheading font-weight-regular">
+                   - El navegador que crea un bloque no puede financiar su propio bloque, es por este motivo que al momento de crear tu proyecto 
+                   no puedes consignar Ether al mismo.<br>
+                   - Las transacciones a través de tu billetera en Metamask las puedes realizar en la red Ropsten (TestNet) lo que significa
+                   que estas no tienen incidencia en la red productiva de Ethereum (MainNet).
+                </p>
+                <p>
+                 <a href="https://defimath.herokuapp.com" target="_blank">Calcúla el costo de las transacciones en Ethereum</a>
+                </p>
               </v-card-title>
               <v-card-text class="pt-0">
                 <v-container class="pt-0" grid-list-md>
