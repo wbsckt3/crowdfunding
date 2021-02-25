@@ -1,10 +1,7 @@
 /* eslint-disable */
 import web3 from './web3';
 
-const address = '0xd9145CCE52D386f254917e481eB44e9943F39138'; // Your deployed contract's address goes here
-// Example:
-// const address = '0x09r80cnasjfaks93m9v2';
-
+const address = '0x8CfAc34881D1ceFc125e87EaB1Cd95d6Ca3fd789';
 const abi = [
 	{
 		"constant": true,
@@ -83,22 +80,7 @@ const abi = [
 		"name": "ProjectStarted",
 		"type": "event"
 	}
-]; // Your ABI goes here (Crowdfunding contract)
-// Example:
-// const abi = [
-//     {
-//         "anonymous": false,
-//         "inputs": [
-//             {
-//                 "indexed": false,
-//                 "name": "contractAddress",
-//                 "type": "address"
-//             }
-//         ],
-//         "name": "ProjectStarted",
-//         "type": "event"
-//     }
-// ];
+];
 
 const instance = new web3.eth.Contract(abi, address);
 
