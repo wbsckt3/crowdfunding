@@ -1,8 +1,10 @@
 // We will be using Solidity version 0.5.4
 pragma solidity 0.5.4;
+//pragma solidity >=0.6.0 <0.8.0;
 // Importing OpenZeppelin's SafeMath Implementation
-import 'https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/math/SafeMath.sol';
-
+//import 'https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/math/SafeMath.sol';
+//import 'https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/math/SafeMath.sol';
+  import 'https://github.com/icherko/openzeppelin-solidity/blob/master/contracts/math/SafeMath.sol';
 
 contract Crowdfunding {
     using SafeMath for uint256;
@@ -187,3 +189,4 @@ contract Project {
         goalAmount = amountGoal;
     }
 }
+
