@@ -91,7 +91,7 @@
         <h2 class="" style="margin-top: -75px;">
           Proyectos en curso
         </h2>
-        <v-layout row wrap>
+        <v-layout row flex>
           <v-flex v-for="(project, index) in projectData" :key="index" xs12>
             <v-dialog
               v-model="project.dialog"
@@ -176,7 +176,7 @@
                     @click="getRefund(index)"
                     :loading="project.isLoading"
                   >
-                    Obtener reembolso (en ETH)
+                    Reembolso (en ETH)
                   </v-btn>
                 </v-flex>
                 <v-card-actions v-if="project.currentState == 0" class="text-xs-center">
