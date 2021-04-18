@@ -73,7 +73,7 @@
               
                 <v-card-title primary-title>
                   <div>
-                    <div class="headline font-weight-bold">
+                    <div class="headline">
                       <v-chip label :color="stateMap[project.currentState].color" text-color="white" class="mt-0"> {{ stateMap[project.currentState].text }} </v-chip>
                       {{ project.projectTitle }}
                     </div>
