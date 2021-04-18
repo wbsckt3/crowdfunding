@@ -86,8 +86,8 @@
                     <small>Disponible hasta: <b>{{ new Date(project.deadline * 1000) }}</b></small>
                     <br/><br/>
                     <small> Meta: <b>{{ project.goalAmount / 10**18 }} ETH </b> </small>
-                    <small v-if="project.currentState == 1"> wasn't achieved before deadline </small>
-                    <small v-if="project.currentState == 2"> has been achieved </small>
+                    <small v-if="project.currentState == 1"> No se logró antes de la fecha límite </small>
+                    <small v-if="project.currentState == 2"> Ha sido conseguido! </small>
                   </div>
                 </v-card-title>
                 
