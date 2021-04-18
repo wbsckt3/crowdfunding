@@ -1,8 +1,8 @@
 <template>
   <v-app class="grey lighten-3">
     <v-content>
+    
       <v-container>
-      
         <v-layout text-xs-center wrap>
           <v-flex mb-4>
             <h2 class="" style="background: #adff2f69; margin-top: -24px; padding-top: 20px;"> EthProxy 🌱 | Latam Crowdfunding </h2>
@@ -57,10 +57,9 @@
             </v-card>
           </v-dialog>
         </v-layout>
-        
       </v-container>
 
-      <v-container grid-list-lg>
+      <v-container>
         <h2 class="" style="margin-top: -75px;"> Proyectos en curso </h2>
         <v-layout row flex>
           <v-flex v-for="(project, index) in projectData" :key="index" xs4>
@@ -151,39 +150,41 @@
         
         <v-layout row justify-left style="background: #d3f59f">
           <v-dialog v-model="startProjectDialog2" max-width="600px" persistent>
-            <v-btn slot="activator" color="blue darken-1" dark>Motivación 😀🌱🥳 </v-btn>                     
+          
+            <v-btn slot="activator" color="blue darken-1" dark>Motivación 😀🌱🥳 </v-btn>   
+            
             <v-card>
-              <v-card-title>
-                <span class="headline font-weight-bold mt-2 ml-4">¿Por qué una aplicación de crowdfunding para Latinoamerica? </span>
-              </v-card-title>
+              
+              <v-card-title> <span class="headline font-weight-bold mt-2 ml-4">¿Por qué una aplicación de crowdfunding para Latinoamerica? </span> </v-card-title>
+              
               <v-card-text class="pt-0">
                 <v-container class="pt-0" grid-list-md>
                   <v-layout wrap>
-                  
-            Las grandes ideas necesitan esfuerzo y financiación. Puede solicitar donaciones o inversores, pero los donantes, por supuesto, preferirían donar a proyectos en los que tienen algún tipo de certeza de que el proyecto realmente va a alguna parte.
-            Aquí es donde entra en juego el crowdfunding, una configuración ideal en la que puede especificar su objetivo y una fecha límite para alcanzarlo. Si no cumple con su objetivo, las donaciones se devuelven, lo que reduce el riesgo para los donantes.
-            Las plataformas existentes son todas geniales, pero en cada proyecto completado o en cada donación enviada, la plataforma toma un cierto porcentaje (margen) que podría, en ocasiones, ser demasiado alto para los emprendedores. 
-            Es más, dependemos en gran medida de ellos como la tercera parte que nos conecta con los donantes. Si fracasan ellos, también nosotros estaremos en problemas.
-            Con una configuración descentralizada, podemos tener una plataforma que no requiere de confianza entre las partes (en lo que se basa el sistema financiero tradicional), por lo tanto, las únicas tarifas que todos pagarán son solo las tarifas del gas
-            <br/><br/><a href="https://defimath.herokuapp.com" target="_blank">Aprende más sobre Ethereum y arquitecturas web descentralizadas</a>
-            
+                    Las grandes ideas necesitan esfuerzo y financiación. Puede solicitar donaciones o inversores, pero los donantes, por supuesto, preferirían donar a proyectos en los que tienen algún tipo de certeza de que el proyecto realmente va a alguna parte.
+                    Aquí es donde entra en juego el crowdfunding, una configuración ideal en la que puede especificar su objetivo y una fecha límite para alcanzarlo. Si no cumple con su objetivo, las donaciones se devuelven, lo que reduce el riesgo para los donantes.
+                    Las plataformas existentes son todas geniales, pero en cada proyecto completado o en cada donación enviada, la plataforma toma un cierto porcentaje (margen) que podría, en ocasiones, ser demasiado alto para los emprendedores. 
+                    Es más, dependemos en gran medida de ellos como la tercera parte que nos conecta con los donantes. Si fracasan ellos, también nosotros estaremos en problemas.
+                    Con una configuración descentralizada, podemos tener una plataforma que no requiere de confianza entre las partes (en lo que se basa el sistema financiero tradicional), por lo tanto, las únicas tarifas que todos pagarán son solo las tarifas del gas
+                    <br/><br/><a href="https://defimath.herokuapp.com" target="_blank">Aprende más sobre Ethereum y arquitecturas web descentralizadas</a>          
                   </v-layout>
                 </v-container>
               </v-card-text>
+              
               <v-card-actions>
                 <v-spacer></v-spacer>
-                
                 <v-btn
                   color="blue darken-1" flat @click="startProjectDialog2 = false;">
                   Cerrar
-                </v-btn>
-                                        
+                </v-btn>              
               </v-card-actions>
+              
             </v-card>
+            
           </v-dialog>
-        </v-layout>   
+        </v-layout>  
         
       </v-container>
+      
     </v-content>
   </v-app>
 </template>
