@@ -21,28 +21,22 @@
             <v-btn slot="activator" color="primary" dark>Emprende un proyecto</v-btn>
             <v-card>
             
-              <v-card-title>
-                <span class="headline font-weight-bold mt-2 ml-4">Emprende tu proyecto</span>
-              </v-card-title>
+              <v-card-title> <span class="headline font-weight-bold mt-2 ml-4">Emprende tu proyecto</span> </v-card-title>
               
               <v-card-text class="pt-0">
                 <v-container class="pt-0" grid-list-md>
                   <v-layout wrap>
                     <v-flex xs12>
-                      <v-text-field label="Titulo" persistent-hint v-model="newProject.title">
-                      </v-text-field>
+                      <v-text-field label="Titulo" persistent-hint v-model="newProject.title"></v-text-field>
                     </v-flex>
                     <v-flex xs12>
-                      <v-textarea label="Descripción" persistent-hint v-model="newProject.description">
-                      </v-textarea>
+                      <v-textarea label="Descripción" persistent-hint v-model="newProject.description"></v-textarea>
                     </v-flex>
                     <v-flex xs12 sm6>
-                      <v-text-field label="Cantidad requerida (ETH)" type="number" step="0.0001" min="0" v-model="newProject.amountGoal">
-                      </v-text-field>
+                      <v-text-field label="Cantidad requerida (ETH)" type="number" step="0.0001" min="0" v-model="newProject.amountGoal"></v-text-field>
                     </v-flex>
                     <v-flex xs12 sm6>
-                      <v-text-field label="Duración (en dias)" type="number" v-model="newProject.duration">
-                      </v-text-field>
+                      <v-text-field label="Duración (en dias)" type="number" v-model="newProject.duration"></v-text-field>
                     </v-flex>
                   </v-layout>
                 </v-container>
@@ -81,9 +75,7 @@
                 <v-card-title primary-title>
                   <div>
                     <div class="headline font-weight-bold">
-                      <v-chip label :color="stateMap[project.currentState].color" text-color="white" class="mt-0">
-                      {{ stateMap[project.currentState].text }}
-                      </v-chip>
+                      <v-chip label :color="stateMap[project.currentState].color" text-color="white" class="mt-0"> {{ stateMap[project.currentState].text }} </v-chip>
                       {{ project.projectTitle }}
                     </div>
                     <br/> <span><b>Cuenta que crea el proyecto:</b> {{ project.projectStarter }} </span>
@@ -94,9 +86,9 @@
                     <br/><br/>
                     <small>Disponible hasta: <b>{{ new Date(project.deadline * 1000) }}</b></small>
                     <br/><br/>
-                    <small>Meta: <b>{{ project.goalAmount / 10**18 }} ETH </b></small>
-                    <small v-if="project.currentState == 1">wasn't achieved before deadline</small>
-                    <small v-if="project.currentState == 2">has been achieved</small>
+                    <small> Meta: <b>{{ project.goalAmount / 10**18 }} ETH </b> </small>
+                    <small v-if="project.currentState == 1"> wasn't achieved before deadline </small>
+                    <small v-if="project.currentState == 2"> has been achieved </small>
                   </div>
                 </v-card-title>
                 
@@ -112,9 +104,7 @@
                 </v-flex>
                 
                 <v-card-actions v-if="project.currentState == 0" class="text-xs-center">
-                  <span class="font-weight-bold" style="width: 200px;">
-                    {{ project.currentAmount / 10**18 }} ETH
-                  </span>
+                  <span class="font-weight-bold" style="width: 200px;"> {{ project.currentAmount / 10**18 }} ETH </span>
                   <v-progress-linear height="10" :color="stateMap[project.currentState].color" :value="(project.currentAmount / project.goalAmount) * 100"></v-progress-linear>
                   <span class="font-weight-bold" style="width: 200px;"> {{ project.goalAmount / 10**18 }} ETH </span>
                 </v-card-actions>
@@ -128,18 +118,11 @@
         <v-layout text-xs-center wrap>
           <v-flex mb-4>                       
             <p class="subheading font-weight-regular">
-             - Los emprendedores no pueden financiar su propio proyecto, es por este motivo que al momento de crear tu proyecto 
-             no puedes donar ETH al mismo.<br>
-             - Las transacciones a través de tu billetera en Metamask las puedes realizar en la red Ropsten (TestNet) lo que significa
-             que estas no tienen incidencia en la red productiva de Ethereum (MainNet).
-            </p>
-            <p>
-             <a href="https://defimath.herokuapp.com" target="_blank">Calcúla el costo de las transacciones en Ethereum</a>
-             |
-             <a href="https://ethereum.org/es/" target="_blank">Asesoria personalizada</a>
-             |
-             <a href="https://ethereum.org/es/" target="_blank">Aprende más sobre Ethereum y arquitecturas web descentralizadas</a>
-            </p>
+                - Los emprendedores no pueden financiar su propio proyecto, es por este motivo que al momento de crear tu proyecto no puedes donar ETH al mismo.<br>
+                - Las transacciones a través de tu billetera en Metamask las puedes realizar en la red Ropsten (TestNet) lo que significa que estas no tienen incidencia en la red productiva de Ethereum (MainNet). </p>
+            <p> <a href="https://defimath.herokuapp.com" target="_blank">Calcúla el costo de las transacciones en Ethereum</a> |
+                <a href="https://ethereum.org/es/" target="_blank">Asesoria personalizada</a> |
+                <a href="https://ethereum.org/es/" target="_blank">Aprende más sobre Ethereum y arquitecturas web descentralizadas</a> </p>
           </v-flex>
         </v-layout> 
         
