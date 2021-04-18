@@ -64,45 +64,34 @@
         <h2 class="" style="margin-top: -75px;"> Proyectos en curso </h2>
         <v-layout row flex>
           <v-flex v-for="(project, index) in projectData" :key="index" xs4>
+          
             <v-dialog v-model="project.dialog" width="800">
               <v-card>
-                <v-card-title class="headline font-weight-bold">
-                  {{ project.projectTitle }}
-                </v-card-title>
-                <v-card-text>
-                  {{ project.projectDesc }}
-                </v-card-text>
+                <v-card-title class="headline font-weight-bold"> {{ project.projectTitle }} </v-card-title>
+                <v-card-text> {{ project.projectDesc }} </v-card-text>
                 <v-card-actions>
                   <v-spacer></v-spacer>
                   <v-btn color="blue darken-1" flat="flat" @click="projectData[index].dialog = false"> Close </v-btn>
                 </v-card-actions>
               </v-card>
             </v-dialog>
+            
             <v-hover>
-              <v-card
-                slot-scope="{ hover }"
-                :class="`elevation-${hover ? 10 : 2}`"
-              >
+            
+              <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 10 : 2}`">
                 <v-card-title primary-title>
                   <div>
                     <div class="headline font-weight-bold">
-                      <v-chip
-                        label
-                        :color="stateMap[project.currentState].color"
-                        text-color="white" class="mt-0">
+                      <v-chip label :color="stateMap[project.currentState].color" text-color="white" class="mt-0">
                       {{ stateMap[project.currentState].text }}
                       </v-chip>
                       {{ project.projectTitle }}
                     </div>
-                    <br/>
-                     <span><b>Cuenta que crea el proyecto:</b> {{ project.projectStarter }} </span>
-                    <br/>
-                      <span><b>Contrato del proyecto:</b> {{ project.contract._address }}</span>
+                    <br/> <span><b>Cuenta que crea el proyecto:</b> {{ project.projectStarter }} </span>
+                    <br/> <span><b>Contrato del proyecto:</b> {{ project.contract._address }} </span>
                     <br/><br/>
                     <span>{{ project.projectDesc.substring(0, 100) }}</span>
-                    <span v-if="project.projectDesc.length > 100">
-                      ... <a @click="projectData[index].dialog = true">[Show full]</a>
-                    </span>
+                    <span v-if="project.projectDesc.length > 100"> ... <a @click="projectData[index].dialog = true">[Show full]</a> </span>
                     <br/><br/>
                     <small>Disponible hasta: <b>{{ new Date(project.deadline * 1000) }}</b></small>
                     <br/><br/>
@@ -111,36 +100,18 @@
                     <small v-if="project.currentState == 2">has been achieved</small>
                   </div>
                 </v-card-title>
-                <v-flex
-                  v-if="project.currentState == 0 && account != project.projectStarter"
-                  class="d-flex ml-3" xs12 sm6 md3>
-                  <v-text-field
-                    label="Cantidad (en ETH)"
-                    type="number"
-                    step="0.0001"
-                    min="0"
-                    v-model="project.fundAmount"
-                  ></v-text-field>
-                  <v-btn
-                    class="mt-3"
-                    color="light-blue darken-1 white--text"
-                    @click="fundProject(index)"
-                    :loading="project.isLoading"
-                  >
-                    Donar
-                  </v-btn>
+                
+                <v-flex v-if="project.currentState == 0 && account != project.projectStarter" class="d-flex ml-3" xs12 sm6 md3>
+                  <v-text-field label="Cantidad (en ETH)" type="number" step="0.0001" min="0" v-model="project.fundAmount"></v-text-field>
+                  <v-btn class="mt-3" color="light-blue darken-1 white--text" @click="fundProject(index)" :loading="project.isLoading"> Donar </v-btn>
                 </v-flex>
+                
                 <v-flex class="d-flex ml-3" xs12 sm6 md3>
-                  <v-btn
-                    class="mt-3"
-                    color="amber darken-1 white--text"
-                    v-if="project.currentState == 1"
-                    @click="getRefund(index)"
-                    :loading="project.isLoading"
-                  >
+                  <v-btn class="mt-3" color="amber darken-1 white--text" v-if="project.currentState == 1" @click="getRefund(index)" :loading="project.isLoading">
                     Reembolso (en ETH)
                   </v-btn>
                 </v-flex>
+                
                 <v-card-actions v-if="project.currentState == 0" class="text-xs-center">
                   <span class="font-weight-bold" style="width: 200px;">
                     {{ project.currentAmount / 10**18 }} ETH
@@ -155,14 +126,12 @@
                   </span>
                 </v-card-actions>
               </v-card>
+              
             </v-hover>
           </v-flex>
         </v-layout>      
         
-        <v-layout
-          text-xs-center
-          wrap
-        >
+        <v-layout text-xs-center wrap>
           <v-flex mb-4>                       
             <p class="subheading font-weight-regular">
              - Los emprendedores no pueden financiar su propio proyecto, es por este motivo que al momento de crear tu proyecto 
