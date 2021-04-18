@@ -2,7 +2,7 @@
   <v-app class="grey lighten-3">
     <v-content>
     
-      <v-container>
+      <v-container style="max-width: 122%";>
         <v-layout text-xs-center wrap>
           <v-flex mb-4>
             <h2 class="" style="background: #adff2f69; margin-top: -24px; padding-top: 20px;"> EthProxy 🌱 | Latam Crowdfunding </h2>
