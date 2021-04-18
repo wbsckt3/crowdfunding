@@ -91,7 +91,7 @@
         <h2 class="" style="margin-top: -75px;">
           Proyectos en curso
         </h2>
-        <v-layout row flex>
+        <v-flex mb-4>
           <v-flex v-for="(project, index) in projectData" :key="index" xs12>
             <v-dialog
               v-model="project.dialog"
@@ -195,7 +195,7 @@
               </v-card>
             </v-hover>
           </v-flex>
-        </v-layout>      
+        </v-flex>      
         
         <v-layout
           text-xs-center
