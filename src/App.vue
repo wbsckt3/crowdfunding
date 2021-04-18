@@ -91,7 +91,7 @@
                   </div>
                 </v-card-title>
                 
-                <v-flex v-if="project.currentState == 0 && account != project.projectStarter" class="d-flex ml-3" xs12 sm6 md3>
+                <v-flex v-if="project.currentState == 0 && account != project.projectStarter" class="d-flex ml-3" xs12 sm6 md3 style="margin-top: -27px;">
                   <v-text-field label="Cantidad (en ETH)" type="number" step="0.0001" min="0" v-model="project.fundAmount"></v-text-field>
                   <v-btn class="mt-3" color="light-blue darken-1 white--text" @click="fundProject(index)" :loading="project.isLoading"> Donar </v-btn>
                 </v-flex>
