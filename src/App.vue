@@ -102,7 +102,7 @@
                   </v-btn>
                 </v-flex>
                 
-                <v-card-actions v-if="project.currentState == 0" class="text-xs-center">
+                <v-card-actions v-if="project.currentState == 0" class="text-xs-center" style="margin-top: -40px;">
                   <span class="font-weight-bold" style="width: 200px;"> {{ project.currentAmount / 10**18 }} ETH </span>
                   <v-progress-linear height="10" :color="stateMap[project.currentState].color" :value="(project.currentAmount / project.goalAmount) * 100"></v-progress-linear>
                   <span class="font-weight-bold" style="width: 200px;"> {{ project.goalAmount / 10**18 }} ETH </span>
