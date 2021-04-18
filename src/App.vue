@@ -55,7 +55,7 @@
 
       <v-container grid-list-lg style="max-width: 122%">
         <h2 class="" style="margin-top: -75px;"> Proyectos en curso </h2>
-        <v-layout row flex>
+        <v-layout row flex xs12>
           <v-flex v-for="(project, index) in projectData" :key="index" xs4>
           
             <v-dialog v-model="project.dialog" width="800">
