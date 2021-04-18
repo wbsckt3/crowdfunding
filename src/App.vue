@@ -140,7 +140,7 @@
                     Las grandes ideas necesitan esfuerzo y financiación. Puede solicitar donaciones o inversores, pero los donantes, por supuesto, preferirían donar a proyectos en los que tienen algún tipo de certeza de que el proyecto realmente va a alguna parte.
                     Aquí es donde entra en juego el crowdfunding, una configuración ideal en la que puede especificar su objetivo y una fecha límite para alcanzarlo. Si no cumple con su objetivo, las donaciones se devuelven, lo que reduce el riesgo para los donantes.
                     Las plataformas existentes son todas geniales, pero en cada proyecto completado o en cada donación enviada, la plataforma toma un cierto porcentaje (margen) que podría, en ocasiones, ser demasiado alto para los emprendedores. 
-                    Es más, dependemos en gran medida de ellos como la tercera parte que nos conecta con los donantes. Si fracasan ellos, también nosotros estaremos en problemas.
+                    Es más, dependemos en gran medida de ellos ya que son quienes nos conectan con los donantes. Si fracasan ellos, también nosotros estaremos en problemas para lograr nuestro objetivo.
                     Con una configuración descentralizada, podemos tener una plataforma que no requiere de confianza entre las partes (en lo que se basa el sistema financiero tradicional), por lo tanto, las únicas tarifas que todos pagarán son solo las tarifas del gas
                     <br/><br/><a href="https://defimath.herokuapp.com" target="_blank">Aprende más sobre Ethereum y arquitecturas web descentralizadas</a>          
                   </v-layout>
