@@ -5,11 +5,10 @@
       <v-container style="max-width: 122%";>
         <v-layout text-xs-center wrap>
           <v-flex mb-4>
-            <h2 class="" style="background: #adff2f69; margin-top: -43px; padding-top: 20px;"> EthProxy 🌱 | Latam Crowdfunding </h2>
+            <h2 class="" style="background: #adff2f69; margin-top: -43px; padding-top: 20px;"> EthProxy 🌱 | Crowdfunding descentralizado basado en Ethereum</h2>
        
             <p class="subheading font-weight-regular">
-              Utiliza Ethereum para crowdfunding descentralizado y aprende la dinámica de los criptoactivos<br><br> 
-              Obten una cuenta para tu billetera <a href="https://metamask.io" target="_blank">Metamask (Extension para Chrome o Firefox)</a> y solicita algunos Eths de prueba<br>
+              Para empezar obten una cuenta para tu billetera <a href="https://metamask.io" target="_blank">Metamask (Extension para Chrome o Firefox)</a> y solicita algunos Eths de prueba<br>
               en <a href="https://faucet.ropsten.be/" target="_blank">faucet.ropsten.be</a> para realizar tu donación o crear tu propio proyecto en la Testnet Ropsten. (puedes
               obtener un ETH cada 24 horas desde tu Ip) 
             </p>
