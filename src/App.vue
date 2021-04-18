@@ -96,7 +96,7 @@
                   <v-btn class="mt-3" color="light-blue darken-1 white--text" @click="fundProject(index)" :loading="project.isLoading"> Donar </v-btn>
                 </v-flex>
                 
-                <v-flex class="d-flex ml-3" xs12 sm6 md3>
+                <v-flex class="d-flex ml-0" xs12 sm6 md7>
                   <v-btn class="mt-3" color="amber darken-1 white--text" v-if="project.currentState == 1" @click="getRefund(index)" :loading="project.isLoading">
                     Reembolso (en ETH)
                   </v-btn>
