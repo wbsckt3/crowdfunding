@@ -2,14 +2,10 @@
   <v-app class="grey lighten-3">
     <v-content>
       <v-container>
-        <v-layout
-          text-xs-center
-          wrap
-        >
+      
+        <v-layout text-xs-center wrap>
           <v-flex mb-4>
-            <h2 class="" style="background: #adff2f69; margin-top: -24px; padding-top: 20px;">
-               EthProxy 🌱 | Latam Crowdfunding 
-            </h2>
+            <h2 class="" style="background: #adff2f69; margin-top: -24px; padding-top: 20px;"> EthProxy 🌱 | Latam Crowdfunding </h2>
             <hr/>
             <p class="subheading font-weight-regular">
               Utiliza Ethereum para crowdfunding descentralizado y aprende la dinámica de los criptoactivos<br><br> 
@@ -85,18 +81,11 @@
         
       </v-container>
 
-      <v-container
-        grid-list-lg
-      >
-        <h2 class="" style="margin-top: -75px;">
-          Proyectos en curso
-        </h2>
+      <v-container grid-list-lg>
+        <h2 class="" style="margin-top: -75px;"> Proyectos en curso </h2>
         <v-layout row flex>
           <v-flex v-for="(project, index) in projectData" :key="index" xs4>
-            <v-dialog
-              v-model="project.dialog"
-              width="800"
-            >
+            <v-dialog v-model="project.dialog" width="800">
               <v-card>
                 <v-card-title class="headline font-weight-bold">
                   {{ project.projectTitle }}
@@ -106,13 +95,7 @@
                 </v-card-text>
                 <v-card-actions>
                   <v-spacer></v-spacer>
-                  <v-btn
-                    color="blue darken-1"
-                    flat="flat"
-                    @click="projectData[index].dialog = false"
-                  >
-                    Close
-                  </v-btn>
+                  <v-btn color="blue darken-1" flat="flat" @click="projectData[index].dialog = false"> Close </v-btn>
                 </v-card-actions>
               </v-card>
             </v-dialog>
