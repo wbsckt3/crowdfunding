@@ -53,7 +53,7 @@
         </v-layout>
       </v-container>
 
-      <v-container grid-list-lg>
+      <v-container grid-list-lg style="max-width: 122%">
         <h2 class="" style="margin-top: -75px;"> Proyectos en curso </h2>
         <v-layout row flex>
           <v-flex v-for="(project, index) in projectData" :key="index" xs4>
