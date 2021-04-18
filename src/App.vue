@@ -15,7 +15,7 @@
           </v-flex>
         </v-layout>
 
-        <v-layout row justify-center>
+        <v-layout row justify-center style="margin-top: -35px;">
           <v-dialog v-model="startProjectDialog" max-width="600px" persistent>
             <v-btn slot="activator" color="primary" dark>Emprende un proyecto</v-btn>
             <v-card>
