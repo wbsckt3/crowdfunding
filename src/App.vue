@@ -76,8 +76,8 @@
             </v-dialog>
             
             <v-hover>
-            
               <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 10 : 2}`">
+              
                 <v-card-title primary-title>
                   <div>
                     <div class="headline font-weight-bold">
@@ -115,18 +115,13 @@
                   <span class="font-weight-bold" style="width: 200px;">
                     {{ project.currentAmount / 10**18 }} ETH
                   </span>
-                  <v-progress-linear
-                    height="10"
-                    :color="stateMap[project.currentState].color"
-                    :value="(project.currentAmount / project.goalAmount) * 100"
-                  ></v-progress-linear>
-                  <span class="font-weight-bold" style="width: 200px;">
-                    {{ project.goalAmount / 10**18 }} ETH
-                  </span>
+                  <v-progress-linear height="10" :color="stateMap[project.currentState].color" :value="(project.currentAmount / project.goalAmount) * 100"></v-progress-linear>
+                  <span class="font-weight-bold" style="width: 200px;"> {{ project.goalAmount / 10**18 }} ETH </span>
                 </v-card-actions>
+                
               </v-card>
-              
             </v-hover>
+            
           </v-flex>
         </v-layout>      
         
