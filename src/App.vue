@@ -5,8 +5,8 @@
       <v-container style="max-width: 122%";>
         <v-layout text-xs-center wrap>
           <v-flex mb-4>
-            <h2 class="" style="background: #adff2f69; margin-top: -24px; padding-top: 20px;"> EthProxy 🌱 | Latam Crowdfunding </h2>
-            <hr/>
+            <h2 class="" style="background: #adff2f69; margin-top: -43px; padding-top: 20px;"> EthProxy 🌱 | Latam Crowdfunding </h2>
+       
             <p class="subheading font-weight-regular">
               Utiliza Ethereum para crowdfunding descentralizado y aprende la dinámica de los criptoactivos<br><br> 
               Obten una cuenta para tu billetera <a href="https://metamask.io" target="_blank">Metamask (Extension para Chrome o Firefox)</a> y solicita algunos Eths de prueba<br>
