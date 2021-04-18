@@ -23,8 +23,8 @@
         <h3 class="" style="margin-top: -75px;">
          Bloques generados a partir del contrato contenedor : <b>0x8CfAc34881D1ceFc125e87EaB1Cd95d6Ca3fd789</b>
         </h3>
-        <v-layout row wrap>
-          <v-flex v-for="(project, index) in projectData" :key="index" xs12>
+        <v-layout row flex>
+          <v-flex v-for="(project, index) in projectData" :key="index" xs4>
             <v-dialog
               v-model="project.dialog"
               width="800"
