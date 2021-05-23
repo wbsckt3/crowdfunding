@@ -12,7 +12,7 @@
               en <a href="https://faucet.ropsten.be/" target="_blank">faucet.ropsten.be</a> para realizar tu donación o crear tu propio proyecto en la Testnet Ropsten. (puedes
               obtener un ETH cada 24 horas desde tu Ip) 
             </p>
-            <p>< href="https://ropsten.etherscan.io/address/0x8cfac34881d1cefc125e87eab1cd95d6ca3fd789" target="_blank">Ver Txn del Contrato Contenedor</a></p>
+            <p><a href="https://ropsten.etherscan.io/address/0x8cfac34881d1cefc125e87eab1cd95d6ca3fd789" target="_blank">Ver Txn del Contrato Contenedor</a></p>
           </v-flex>
         </v-layout>
 
