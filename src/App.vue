@@ -276,6 +276,7 @@
 // We import our the scripts for the smart contract instantiation, and web3
 import crowdfundInstance from '../contracts/crowdfundInstance';
 import crowdfundProject from '../contracts/crowdfundProjectInstance';
+import storeNumberInstance from '../contracts/storeNumberInstance';
 import web3 from '../contracts/web3';
 export default {
   name: 'App',
@@ -361,6 +362,10 @@ export default {
         this.projectData[index].isLoading = false;
       });
     },
+    coolNumber(){
+     const coolNumber = storeNumberInstance.methods.coolNumber().call();
+     console-log(coolNumber);
+    }
   },
 };
 </script>
