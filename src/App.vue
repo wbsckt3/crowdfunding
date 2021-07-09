@@ -365,7 +365,7 @@ export default {
     },
     coolNumber(){
      const coolNumber = storeNumberInstance.methods.coolNumber().call();
-     console-log(coolNumber);
+     console.log(coolNumber);
     }
   },
 };
