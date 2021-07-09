@@ -197,7 +197,7 @@
     </v-content>
   </v-app>
 </template>
-<script>
+
 <script>
 // We import our the scripts for the smart contract instantiation, and web3
 import crowdfundInstance from '../contracts/crowdfundInstance';
@@ -295,5 +295,4 @@ export default {
     }
   },
 };
-</script>
 </script>
