@@ -1,14 +1,12 @@
 <template>
   <v-app class="grey lighten-3">
     <v-content>
+    
       <v-container>
-        <v-layout
-          text-xs-center
-          wrap
-        >
+        <v-layout text-xs-center wrap>
           <v-flex mb-4>
             <h2 class="" style="margin-top: -20px; padding-top: 20px;">
-               Eth Proxy 🌱 | Prototipo funcional de aplicación descentralizada para contratos inteligentes en Ethereum  
+               InstaCrypt 🌱 | Prototipo funcional de aplicación descentralizada para contratos inteligentes en Ethereum  
             </h2>
             <hr/>
             <p class="subheading font-weight-regular"> 
@@ -17,50 +15,27 @@
         </v-layout>       
       </v-container>
 
-      <v-container
-        grid-list-lg
-      >
-        <h3 class="" style="margin-top: -75px;">
-         Bloques generados a partir del contrato contenedor : <b>0x8CfAc34881D1ceFc125e87EaB1Cd95d6Ca3fd789</b>
-        </h3>
+      <v-container grid-list-lg>
+        <h3 class="" style="margin-top: -75px;"> Bloques generados a partir del contrato contenedor : <b>0x8CfAc34881D1ceFc125e87EaB1Cd95d6Ca3fd789</b> </h3>
         <v-layout row flex>
           <v-flex v-for="(project, index) in projectData" :key="index" xs4>
-            <v-dialog
-              v-model="project.dialog"
-              width="800"
-            >
+            <v-dialog v-model="project.dialog" width="800">
               <v-card>
-                <v-card-title class="headline font-weight-bold">
-                  {{ project.projectTitle }}
-                </v-card-title>
-                <v-card-text>
-                  {{ project.projectDesc }}
-                </v-card-text>
+                <v-card-title class="headline font-weight-bold"> {{ project.projectTitle }} </v-card-title>
+                <v-card-text> {{ project.projectDesc }} </v-card-text>
                 <v-card-actions>
                   <v-spacer></v-spacer>
-                  <v-btn
-                    color="blue darken-1"
-                    flat="flat"
-                    @click="projectData[index].dialog = false"
-                  >
-                    Cerrar
-                  </v-btn>
+                  <v-btn color="blue darken-1" flat="flat" @click="projectData[index].dialog = false"> Cerrar </v-btn>
                 </v-card-actions>
               </v-card>
             </v-dialog>
             <v-hover>
-              <v-card
-                slot-scope="{ hover }"
-                :class="`elevation-${hover ? 10 : 2}`"
-              >
+              <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 10 : 2}`">
                 <v-card-title primary-title>
                   <div>
                     <div class="headline font-weight-bold">
-                      <v-chip
-                        label
-                        :color="stateMap[project.currentState].color"
-                        text-color="white" class="mt-0">
-                      {{ stateMap[project.currentState].text }}
+                      <v-chip label :color="stateMap[project.currentState].color" text-color="white" class="mt-0">
+                         {{ stateMap[project.currentState].text }}
                       </v-chip>
                       {{ project.projectTitle }}
                     </div>
@@ -70,9 +45,7 @@
                       <span><b>Contrato del bloque:</b> {{ project.contract._address }}</span>
                     <br/><br/>
                     <span>{{ project.projectDesc.substring(0, 100) }}</span>
-                    <span v-if="project.projectDesc.length > 100">
-                      ... <a @click="projectData[index].dialog = true">[Show full]</a>
-                    </span>
+                    <span v-if="project.projectDesc.length > 100"> ... <a @click="projectData[index].dialog = true">[Show full]</a> </span>
                     <br/><br/>
                     <small>Licitación disponible hasta: <b>{{ new Date(project.deadline * 1000) }}</b></small>
                     <br/><br/>
@@ -81,55 +54,26 @@
                     <small v-if="project.currentState == 2">Esta licitación logró recaudar los fondos necesarios</small>
                   </div>
                 </v-card-title>
-                <v-flex
-                  v-if="project.currentState == 0 && account != project.projectStarter"
-                  class="d-flex ml-3" xs12 sm6 md3>
-                  <v-text-field
-                    label="Cantidad (en ETH)"
-                    type="number"
-                    step="0.0001"
-                    min="0"
-                    v-model="project.fundAmount"
-                  ></v-text-field>
-                  <v-btn
-                    class="mt-3"
-                    color="light-blue darken-1 white--text"
-                    @click="fundProject(index)"
-                    :loading="project.isLoading"
-                  >
+                <v-flex v-if="project.currentState == 0 && account != project.projectStarter" class="d-flex ml-3" xs12 sm6 md3>
+                  <v-text-field label="Cantidad (en ETH)" type="number" step="0.0001" min="0" v-model="project.fundAmount"></v-text-field>
+                  <v-btn class="mt-3" color="light-blue darken-1 white--text" @click="fundProject(index)" :loading="project.isLoading">
                     Transferir
                   </v-btn>
                 </v-flex>
                 <v-flex class="d-flex ml-3" xs12 sm6 md3>
-                  <v-btn
-                    class="mt-3"
-                    color="amber darken-1 white--text"
-                    v-if="project.currentState == 1"
-                    @click="getRefund(index)"
-                    :loading="project.isLoading"
-                  >
+                  <v-btn class="mt-3" color="amber darken-1 white--text" v-if="project.currentState == 1" @click="getRefund(index)" :loading="project.isLoading">
                     Obtener reembolso (en ETH)
                   </v-btn>
                 </v-flex>
                 <v-card-actions v-if="project.currentState == 0" class="text-xs-center">
-                  <span class="font-weight-bold" style="width: 200px;">
-                    {{ project.currentAmount / 10**18 }} ETH
-                  </span>
-                  <v-progress-linear
-                    height="10"
-                    :color="stateMap[project.currentState].color"
-                    :value="(project.currentAmount / project.goalAmount) * 100"
-                  ></v-progress-linear>
-                  <span class="font-weight-bold" style="width: 200px;">
-                    {{ project.goalAmount / 10**18 }} ETH
-                  </span>
+                  <span class="font-weight-bold" style="width: 200px;"> {{ project.currentAmount / 10**18 }} ETH </span>
+                  <v-progress-linear height="10" :color="stateMap[project.currentState].color" :value="(project.currentAmount / project.goalAmount) * 100"> </v-progress-linear>
+                  <span class="font-weight-bold" style="width: 200px;"> {{ project.goalAmount / 10**18 }} ETH </span>
                 </v-card-actions>
               </v-card>
             </v-hover>
           </v-flex>
         </v-layout>      
-        
-        
         
         <v-layout row justify-center>
           <v-dialog v-model="startProjectDialog" max-width="600px" persistent>
@@ -142,34 +86,16 @@
                 <v-container class="pt-0" grid-list-md>
                   <v-layout wrap>
                     <v-flex xs12>
-                      <v-text-field
-                        label="Titulo"
-                        persistent-hint
-                        v-model="newProject.title">
-                      </v-text-field>
+                      <v-text-field label="Titulo" persistent-hint v-model="newProject.title"> </v-text-field>
                     </v-flex>
                     <v-flex xs12>
-                      <v-textarea
-                        label="Descripción"
-                        persistent-hint
-                        v-model="newProject.description">
-                      </v-textarea>
+                      <v-textarea label="Descripción" persistent-hint v-model="newProject.description"> </v-textarea>
                     </v-flex>
                     <v-flex xs12 sm6>
-                      <v-text-field
-                        label="Cantidad requerida (ETH)"
-                        type="number"
-                        step="0.0001"
-                        min="0"
-                        v-model="newProject.amountGoal">
-                      </v-text-field>
+                      <v-text-field label="Cantidad requerida (ETH)" type="number" step="0.0001" min="0" v-model="newProject.amountGoal"> </v-text-field>
                     </v-flex>
                     <v-flex xs12 sm6>
-                      <v-text-field
-                        label="Duración (en dias)"
-                        type="number"
-                        v-model="newProject.duration">
-                      </v-text-field>
+                      <v-text-field label="Duración (en dias)" type="number" v-model="newProject.duration"> </v-text-field>
                     </v-flex>
                   </v-layout>
                 </v-container>
