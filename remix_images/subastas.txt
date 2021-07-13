@@ -1,0 +1,9 @@
+Creando una subasta (auction)
+Hacer una oferta (bid)
+Finalizando una subasta (auction)
+
+Account 5 -> crea auction
+Account 1 -> oferta 1 cuando presiona finalized recibe el 1 que pagó
+account 7 -> oferta 2 
+
+ pausar grabación screenpresso = ctrl + imp pnt para hacer pausas en los videos
