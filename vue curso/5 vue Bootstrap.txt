@@ -1,0 +1,39 @@
+
+ --- vue.js y Bootstrap
+
+ 1. Instalar Bootstrap-vue https://bootstrap-vue.org/
+
+url : interfaz gráfica > mi-liga > dependencias buscamos bootstrap-vue > instalar
+ir a src/main.js import BootstrapVue from 'bootstrap-vue'
+                 import 'bootstrap/dist/css/bootstrap.css'
+                 import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+                 Vue.use{BootstrapVue}
+
+ir a src/App.vue removemos el logo y ponemos el botón <b-button>Mi botón</b-button>
+(la sintaxis se consulta en bootstrap-vue.org/docs/components/button)
+ejecutar por interfaz gráfica > tarea > server (es el npm start)
+
+2. Uso de componentes de bootstrap:
+
+En components/HelloWorld.vue -> removemos todo el contenido de <template> ... </template> todo componente las lleva
+y ponemos <div> <b-button variant="success" :pressed="true" size="lg"> Mi botón </b-button> </div>  -> siempre debe haber un contenedor div
+los dos puntos indican un binding (ligando algo con un valor que se está procesando como javascript en este caso el valor true)
+los estilos en bootstrap-vue.org/docs/reference > color variants
+               bootstrap-vue.org/docs/reference > Size props and classes
+
+3. Layout and Grid system Bootstrap:
+
+En components/HelloWorld.vue ->  un renglón y tres columnas
+<b-container fluid> 
+    <b-row>
+        <b-col></b-col>
+        <b-col></b-col>
+        <b-col></b-col>
+    </b-row> <!-- comentario html --> /* comentario javascript */
+</container>
+
+ 
+
+
+

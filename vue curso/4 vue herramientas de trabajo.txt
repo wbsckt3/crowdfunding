@@ -1,0 +1,40 @@
+
+ --- Herramientas de trabajo de Vue:
+
+ 1. Visual studio code extensiones:
+    buscar - Vue 2 snippets (extensión de visual studio code para Vue)
+           - Vetur
+    	   https://gist.github.com/yacafx/1bc86f8c813fe6ef0f80eea9092daf92
+      	   https://gist.github.com/yacafx/b60418d6814f0e3ea5dfb7550052bc41 (instalar = copiar, pegar y ejecutar en $
+           cerrar vscode para que cojan y volver a abrir)
+    vue-enterprise-boilerplate/.vscode/settings.json
+    vue-enterprise-boilerplate/.vscode/extensions.json (notif de extensiones recomendadas de vscode decir q si)
+    vue-enterprise-boilerplate/.vscode/snippets/vue.json (bloques de codigo reutilizables en proyectos)
+
+ 2. trucos vscode :
+
+    - con ctrl + poner el mouse sore un nombre de archivo + click abre el arhivo (no hay que navegar x carpetas)
+    - click derecho sobre un componente > seleccionar peek definition (para ver el codigo de ese archivo)
+    - menu view > toggle breadcrumbs : ctrl + f = muestra en botones los archivos de todos los elementos relacionados 
+                  de ese archivo (estos de actualizan a medida que se va navegando)
+  
+ 3. Modificar un componente con Vue dev tools
+
+    - Boilerplate > router/views/home.vue  -> al objeto export default agregarle una propiedad:
+          data(){ return {title : 'Titulo} }
+
+       y la variable title la ponemos en <h1>Home page</h1> ---> <h1>{{ title }}</h1>
+
+    - En el navegador podemos cambiar las data de los components desde el dev tools
+
+ 4. store - Historia de la data en : f12 > vue > vuex (icono reloj) -> pulsamos en punto de grabar y se vuelve rojo
+    nos loguiamos y vemos en el store como se agrega el elemento nuevo
+    en verde queda resaltado el store actual de los datos
+    si sobre un registro de la lista se da click en el botón de tiempo (time travel to this state) retorna al estado
+    es decir no hay que volver a loguearse.
+    commit this mutation hace que el último estado sea el estado base
+
+ 5. Tracking de los eventos de manera historica: f12 > vue > bandera de finalizar al lado de botón vuex
+    pulsamos en punto de start recording y se vuelve rojo
+    payload : objeto que va a transportar todos los datos
+  

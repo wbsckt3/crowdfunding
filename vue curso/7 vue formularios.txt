@@ -1,0 +1,58 @@
+
+ --- Formularios en vue
+
+1. En components/forms/Equipo.vue vamos a pasar el modal que creamos en App.vue
+
+En App.vue import FormEquipo from './components/forms/Equipo.vue'
+           export ...  'equipo-frm' : FormEquipo
+           <template>  .. <equipo-frm></equipo-frm>
+
+ nos llevamos <b-modal id="myModal"> ... </b-modal> para components/forms/Equipo.vue
+para la plantilla 
+<template></template> 
+<script></script>
+<style></style>
+
+y dentro del <script></script> ponemos nuestro export default { data(){ return{} } }
+
+2. Retronamos desde el componente un objeto form inicializando los valores de los campos:
+
+export default { 
+ 	data(){ 
+	 return{
+	   form: {
+	    nombre : "",
+            logo   : "",
+            jugadores : [],
+            estado : false  
+          },
+          jugadores : [ ... ],
+	  show : true
+         } 
+        } 
+       }
+
+agregamos una etiqueta <v-form v-if="show"><b-</b-form> antes del footer del modal
+
+3. Para limpiar los datos del form propiedad: @reset = "onReset" en la etiqueta v-form 
+y en el export default establecemos el método onReset(evt) para inicializar los datos vacios this.form.nombre = "" ...
+y ponemos dentro de v-form un div class con un botón <b-button type="reset" limpiar que ejecute el evento reset
+
+4. Enviar datos <b-button type="submit"  y en la etiqueta v-form agregamos @submit = "onSubmit"
+y en el export default establecemos el método 
+   onSubmit(evt){
+      evt.preventDefault();
+      alert(JSON.stringify(this.form))
+      this.$emit("new-team", this.form)
+      this.$refs.myModal.hide()
+   }
+
+Para cerrar la ventana después del envío:
+En <b-modal ponemos una ref="myModal" para en el método onSubmit poner un this.$refs.myModal.hide()
+
+Para pasar los datos del componente modal a la lista de equipos de App.vue : this.$emit("new_team", this.form)
+en la etiqueta <equipo-frm @new_team ="onNewteam"> esta escucha con @ del evento new_team la agregamos 
+a los methods onNewteam del script de este archivo 
+onNewteam(equipo){ this.equipos.push( Object.assign{},equipo ) }
+
+ 

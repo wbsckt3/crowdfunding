@@ -1,0 +1,18 @@
+
+ --- Interfaz gráfica administración de proyectos:  
+ 1. Importar proyectos instalados por consola:
+ $ vue ui -> depliega url localhost:8000/project/select
+ importar desde desktop los dos proyectos mi-liga y el boilerplate instalados por consola
+
+ 2. Revisión de calidad de código de Vue: Lint
+ url : localhost:8000/project/select > boilerplate > tareas > Lint > ejecutar tarea = $ npm run ... Lint del package.json script
+ /stylelint.config.js -> reglas para eslint
+
+ 3. Ejecutar aplicación en el editor visual:
+ proyecto > tareas > dev (ventajas visualización de estadisticas)
+
+ 4. Build : generar app de producción
+ interfaz grafica > enterprise project > tareas > build -> genera carpeta dist para cualquier hosting
+  
+ 5. complementos y dependencias
+ el editor gráfico recomienda para mi-liga router y vuex (para estado de los datos)

@@ -1,0 +1,11 @@
+
+  --- estructura: github.com/chrisvfritz/vue-enterprise-boilerplate (parte del equipo core de Vue)
+ $ git clone https://github.com/chrisvfritz/vue-enterprise-boilerplate.git
+ $ cd vue-enterprise-boilerplate
+ $ node _start.js
+ $ rm _start.js
+ $ yarn install (setup and development)
+ $ yarn dev --open (abrir una instancia en el navegador de la aplicación compilada)
+ url: localhost:8080
+      - login : admin 
+      - passw : password

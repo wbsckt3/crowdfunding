@@ -1,0 +1,112 @@
+
+ --- Componentes y datos personalizados con Vue.js
+
+ 1. Crear un nuevo componente:
+
+ El componente components/HelloWorld.vue
+ contiene las referencias: src/App.vue ->
+                 - En <template><div id="app"> ... </div></template> (la quitamos)
+                 - En import component (la quitamos)
+ 		 - En export component (la quitamos)
+
+nuevo componente:
+<template>
+  <div>hola componente</div>
+</template>
+<script>
+</script>
+<style scoped> (scoped solo estilos para este archivo, sin scoped estilos globales)
+</style>
+
+y lo agregamos en App.vue al template con su etiqueta <Equipo />, import y export
+src/App.vue -> - En <template><div id="app"> <Equipo /></div></template>
+               - En import Equipo from "./components/Equipo.vue"   
+               - En export dafault{ components : Equipo }        
+
+2. Agregar estructura y contenido:
+En Equipo.vue:
+agregar export default { } en el script del template
+y adentro un método llamado data que pasa las propiedades: 
+data(){ return { nombre:"", logo:"", estado:"", jugadores:"" } }
+agregamos un <b-card :header="nombre" :img-src="logo">
+                <p class="card-text">
+                   Estado: <div :class="{ 'activo': estado, 'inactivo':{estado} }" class="circulo" </div></br>
+                   Jugadores : {{ jugadores.length }}  ---> {estado} significa si el estado no es true
+                </p>
+		<b-button variant="primary">Ver jugadores</b-button>
+             </b-card> al template
+vamos a <style>
+.circulo{
+width: 20px; height: 20px; border-radius: 50%; margin: 0 auto;
+}
+.activo{
+backcground-color: green
+}
+.inactivo{
+backcground-color: gray
+}
+
+3. Múltiples registros: generar varias instancias del componente Equipo i.e. varias b-cards
+
+En components/Equipo.vue:
+
+export dafault{ props: { info: { nombre: String, logo: String:, estado:Boolean, jugadores: Array } } }
+ya en el header del b-card los datos llegan con info.nombre, info.estado, info.logo
+
+En App.vue en el export default del script pasamos paralelo a components el Array de registros:
+ ,data(){ return{ equipos: [{ equipo 1 }, {equipo 2}, ..., {equipo n}] } } }
+
+ iteramos sobre el objeto info
+
+   <template>
+      <div id="app">
+	 <b-container>
+            <b-row>
+               <b-col v-for="(equipo, index) in equipos" :key='index'>
+                  <Equipo :info="equipo"/>
+               </b-col>
+    	    </b-row>
+	 </b-container>
+      </div>
+   </template>
+
+4. Usar botones con iconos de fontawesome: en dependencias de la interfaz grafica buscamos vue-awesome
+
+justineo.github.io/vue-awesome/demo
+
+en main.js import Icon from "vue-awesome/components/Icon";
+           import "vue-awesome/icons";
+           ...
+           Vue.component("v-icon", Icon); -> declaramos que vamos a utilizar la etiqueta v-icon
+
+En src/App.vue creamos un nuevo renglón para poner un botón que invoque algo:
+
+   <template>
+      <div id="app">
+	 <b-container>
+	    <b-row>
+               <b-col>
+                  <b-button variant="success" class="float-right new-btn">
+		  <v-icon class="icon" name="plus">
+                     Agregar equipo
+		  </b-button>
+	       <b-col>
+            </b-row>
+            <b-row>
+               <b-col v-for="(equipo, index) in equipos" :key='index'>
+                  <Equipo :info="equipo"/>
+               </b-col>
+    	    </b-row>
+	 </b-container>
+      </div>
+   </template>
+
+5. Ventanas modales para agregar formularios con el botón agregar equipo:
+
+En App.vue agregamos una propiedad al botón: v-b-modal="'myModal'"
+
+y creamos alli mismo la ventana: <b-modal id="myModal" title="Nuevo Equipo" footer-class="mymodal-footer"> <div slot="modal-footer"></div> </b-modal>
+
+quitar los botones por defecto de la ventana modal para poder agregar mas inputs al formulario.
+footer-class="mymodal-footer" ->een style con la class .mymodal-footer ocultamos display none inportant el footer por cuestión de problemas
+de estilo a la hora de mostrar los nuevos botones.

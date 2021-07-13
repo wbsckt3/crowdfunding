@@ -1,0 +1,21 @@
+
+ --- Instalación Vue:
+ github.com/yacafx/in-mi-liga rama master ejercicio final - ramas capitulos del curso
+ git clone, npm i -> instala dependencias
+ $ npm install -g @vue/cli  
+ $ vue --version
+ $ npm install -g @vue/cli-service-global
+ $ vue create mi-liga   https://vuejs.org > learn > Style guide (usar guión y en minuscula)
+ $ seleccionar preset default
+ $ seleccionar Yarn (yarn ejecuta las instalaciones de manera sincrona, todas a la vez, más rápido, asi hace facebook)
+ $ cd mi-liga (aplicación que crea vue)
+ $ code . (abre el proyecto en visaul studio code)
+   /public         -> cuando compilemos la app queda aquí
+   /src            -> archivos base
+   /src/assets     -> recursos estáticos imagenes, etc
+   /src/components 
+   /src/App.vue
+   /src/main.js
+   /.gitignore
+ $ npm run serve  -> app ya compilada (en package.json script están los comandos que corren con $ npm run ...)
+ url : localhost:8080
