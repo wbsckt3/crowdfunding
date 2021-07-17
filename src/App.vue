@@ -197,9 +197,7 @@
       
     </v-content>
   </v-app>
-</template>
-
-<template>
+  
   <div id="app">
     <div style="display: flex; flex-direction: column;">
       <!-- Upload Interface -->
@@ -266,7 +264,9 @@
       </ul>
     </div>
   </div>
+  
 </template>
+
 
 <script>
 // We import our the scripts for the smart contract instantiation, and web3
