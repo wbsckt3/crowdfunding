@@ -194,6 +194,74 @@
         </v-layout>   
         
       </v-container>
+      
+      
+      <div style="display: flex; flex-direction: column;">
+      <!-- Upload Interface -->
+      <div id="upload">
+        <div v-if="this.$root.$data.loading === false">
+          <h1>Post Here!</h1>
+          <h4>share your memories.</h4>
+
+          <!-- Form for file choose, caption text and submission -->
+          <form
+            class="margin-sm"
+            @submit.stop.prevent="handleSubmit"
+          >
+            <div class="border-style">
+              <b-form-file
+                plain
+                @change="captureFile"
+              />
+            </div>
+            <b-form-textarea
+              v-model="caption"
+              placeholder="Post description"
+              :rows="3"
+              :max-rows="6"
+              class="margin-xs"
+            />
+            <b-button
+              class="margin-xs"
+              variant="secondary"
+              @click="handleOk"
+            >
+              Upload
+            </b-button>
+          </form>
+        </div>
+        <div
+          v-if="this.$root.$data.loading === true"
+          style="margin-top: 10%; margin-bottom: 5%"
+        >
+          <img
+            class="upload-load"
+            src="https://media.giphy.com/media/2A6xoqXc9qML9gzBUE/giphy.gif"
+          >
+        </div>
+      </div>
+
+      <!-- Posts Interface -->
+      <ul class="home-list">
+        <li
+          v-for="item in this.$root.$data.currentPosts"
+          :key="item.key"
+          :item="item"
+        >
+          <!-- Card UI for post's image & caption text -->
+          <b-card
+            border-variant="secondary"
+            :img-src="item.src"
+          >
+            <p class="home-card-text">
+              {{ item.caption }}
+            </p>
+          </b-card>
+        </li>
+      </ul>
+    </div>
+      
+      
     </v-content>
   </v-app>
 </template>
