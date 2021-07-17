@@ -174,29 +174,10 @@
                       (Se puede obtener un ETH de prueba cada 24 horas desde la Ip del navegador).<br><br>                                                            
                       
                       Para comprar ETH real existe www.buda.com, primer Banco digital de criptoactivos</a> de una compañia llamada surBTC basada en Chile
-                      (activa en Chile, Perú, Argentina y Colombia). <br><br>                                   
+                      (activa en Chile, Perú, Argentina y Colombia). <br><br>    
                       
-                  </v-layout>
-                </v-container>
-              </v-card-text>
-  
-              <v-card-actions>
-                <v-spacer></v-spacer>
-                
-                <v-btn
-                  color="blue darken-1" flat @click="startProjectDialog2 = false;">
-                  Cerrar
-                </v-btn>
-                                        
-              </v-card-actions>
-            </v-card>
-          </v-dialog>
-        </v-layout>   
-        
-      </v-container>
-      
-      
-      <div style="display: flex; flex-direction: column;">
+                      
+                            <div style="display: flex; flex-direction: column;">
       <!-- Upload Interface -->
       <div id="upload">
         <div v-if="this.$root.$data.loading === false">
@@ -260,7 +241,26 @@
         </li>
       </ul>
     </div>
-      
+                      
+                      
+                  </v-layout>
+                </v-container>
+              </v-card-text>
+  
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                
+                <v-btn
+                  color="blue darken-1" flat @click="startProjectDialog2 = false;">
+                  Cerrar
+                </v-btn>
+                                        
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
+        </v-layout>   
+        
+      </v-container>     
       
     </v-content>
   </v-app>
