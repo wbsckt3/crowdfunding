@@ -174,10 +174,34 @@
                       (Se puede obtener un ETH de prueba cada 24 horas desde la Ip del navegador).<br><br>                                                            
                       
                       Para comprar ETH real existe www.buda.com, primer Banco digital de criptoactivos</a> de una compañia llamada surBTC basada en Chile
-                      (activa en Chile, Perú, Argentina y Colombia). <br><br>    
+                      (activa en Chile, Perú, Argentina y Colombia). <br><br>                  
                       
-                      
-                            <div style="display: flex; flex-direction: column;">
+                  </v-layout>
+                </v-container>
+              </v-card-text>
+  
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                
+                <v-btn
+                  color="blue darken-1" flat @click="startProjectDialog2 = false;">
+                  Cerrar
+                </v-btn>
+                                        
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
+        </v-layout>   
+        
+      </v-container>     
+      
+    </v-content>
+  </v-app>
+</template>
+
+<template>
+  <div id="app">
+    <div style="display: flex; flex-direction: column;">
       <!-- Upload Interface -->
       <div id="upload">
         <div v-if="this.$root.$data.loading === false">
@@ -241,29 +265,7 @@
         </li>
       </ul>
     </div>
-                      
-                      
-                  </v-layout>
-                </v-container>
-              </v-card-text>
-  
-              <v-card-actions>
-                <v-spacer></v-spacer>
-                
-                <v-btn
-                  color="blue darken-1" flat @click="startProjectDialog2 = false;">
-                  Cerrar
-                </v-btn>
-                                        
-              </v-card-actions>
-            </v-card>
-          </v-dialog>
-        </v-layout>   
-        
-      </v-container>     
-      
-    </v-content>
-  </v-app>
+  </div>
 </template>
 
 <script>
@@ -365,3 +367,59 @@ export default {
   },
 };
 </script>
+
+<style>
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  color: #2c3e50;
+  margin-top: 3%;
+}
+.home-load {
+  width: 50px;
+  height: 50px;
+}
+.card img {
+  object-fit: cover;
+  height: 500px;
+  width: 500px;
+}
+.card {
+  text-align: left;
+  width: 500px;
+  margin-bottom: 20px;
+}
+.home-list{
+  padding: 0;
+  list-style: none;
+}
+.home-card-text {
+  text-align: justify;
+  margin-top: 10px;
+}
+#upload {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 5%;
+  width: 500px;
+}
+.upload-load {
+  width: 50px;
+  height: 50px;
+}
+.margin-xs {
+  margin-top: 3%;
+}
+.margin-sm {
+  margin-top: 7%;
+}
+.border-style {
+  border: 1px solid #ced4da;
+}
+</style>
