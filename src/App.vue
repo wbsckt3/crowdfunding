@@ -231,6 +231,7 @@ export default {
       [this.account] = accounts;
       this.getProjects();
       this.coolNumber();
+      this.bal();
     });
   },
   methods: {
@@ -297,6 +298,10 @@ export default {
     coolNumber(){
      const coolNumber = storeNumberInstance.methods.coolNumber().call();
      console.log(coolNumber);
+    },
+    bal(){
+      const balance = farmTokenInstance.methods.balance().call();
+      console.log(coolNumber);
     }
   },
 };
