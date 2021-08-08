@@ -301,7 +301,7 @@ export default {
     },
     bal(){
       const balance = farmTokenInstance.methods.balance().call();
-      console.log(coolNumber);
+      console.log(balance);
     }
   },
 };
