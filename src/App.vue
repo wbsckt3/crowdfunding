@@ -121,37 +121,7 @@
         </v-layout>
         
         
-        <v-layout row justify-center>
-          <v-dialog v-model="startProjectDialog" max-width="600px" persistent>
-            <v-btn slot="activator" color="primary" dark>Generar un nuevo bloque a partir del contrato contenedor</v-btn>
-            <v-card>
-              <v-card-title> <span class="headline font-weight-bold mt-2 ml-4">Genera un nuevo bloque</span> </v-card-title>
-              <v-card-text class="pt-0">
-                <v-container class="pt-0" grid-list-md>
-                  <v-layout wrap>
-                    <v-flex xs12>
-                      <v-text-field label="Titulo" persistent-hint v-model="newProject.title"> </v-text-field>
-                    </v-flex>
-                    <v-flex xs12>
-                      <v-textarea label="Descripción" persistent-hint v-model="newProject.description"> </v-textarea>
-                    </v-flex>
-                    <v-flex xs12 sm6>
-                      <v-text-field label="Cantidad requerida (ETH)" type="number" step="0.0001" min="0" v-model="newProject.amountGoal"> </v-text-field>
-                    </v-flex>
-                    <v-flex xs12 sm6>
-                      <v-text-field label="Duración (en dias)" type="number" v-model="newProject.duration"> </v-text-field>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-card-text>
-              <v-card-actions>
-                <v-spacer></v-spacer>
-                <v-btn color="blue darken-1" flat @click="startProjectDialog = false; newProject.isLoading = false;"> Cerrar </v-btn>
-                <v-btn color="blue darken-1" flat @click="startProject":loading="newProject.isLoading"> Crear proyecto </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-dialog>
-        </v-layout>
+        
         
         
         
