@@ -239,7 +239,7 @@ export default {
     return {
       startProjectDialog: false,
       startProjectDialog2: true,
-      startProjectDialog2: false,
+      startProjectDialog3: false,
       account: null,
       stateMap: [
         { color: 'primary', text: 'En curso' },
