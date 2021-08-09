@@ -21,7 +21,7 @@
           <v-flex v-for="(project, index) in projectData" :key="index" xs4>
             <v-dialog v-model="project.dialog" width="800">
               <v-card>
-                <v-card-title class="headline font-weight-bold"> {{ project.projectTitle }} {{ project.balan }}</v-card-title>
+                <v-card-title class="headline font-weight-bold"> {{ project.projectTitle }} </v-card-title>
                 <v-card-text> {{ project.projectDesc }} </v-card-text>
                 <v-card-actions>
                   <v-spacer></v-spacer>
@@ -279,7 +279,6 @@ export default {
     bal(){
       const balance = farmTokenInstance.methods.balance().call();
       console.log(balance);
-      this.projectData[index].balan = balance;
     }
   },
 };
