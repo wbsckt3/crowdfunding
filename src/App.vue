@@ -131,15 +131,14 @@
               <v-container class="pt-0" grid-list-md>
                    <v-layout wrap>
                   <v-flex xs12>
-                   <v-text-field label="Token amount" persistent-hint v-model="deposit.amount"> </v-text-field>
+                   <v-text-field label="Token amount" persistent-hint v-model=""> </v-text-field>
                 </v-flex>
                      </v-layout>
                   </v-container>
                </v-card-text>
                <v-card-actions>
                   <v-spacer></v-spacer>
-                  <v-btn color="blue darken-1" flat @click="startProjectDialog3 = false; deposit.isLoading = false;"> Cerrar           </v-btn>
-                  <v-btn color="blue darken-1" flat @click="deposit":loading="deposit.isLoading">                     Depositar tokens </v-btn>
+                  <v-btn color="blue darken-1" flat @click="startProjectDialog3 = false; "> Cerrar           </v-btn>
                </v-card-actions>
             </v-card>
          </v-dialog>
