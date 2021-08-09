@@ -102,19 +102,8 @@
               </v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn
-                  color="blue darken-1"
-                  flat
-                  @click="startProjectDialog = false;
-                  newProject.isLoading = false;">
-                  Cerrar
-                </v-btn>
-                <v-btn color="blue darken-1"
-                  flat
-                  @click="startProject"
-                  :loading="newProject.isLoading">
-                  Crear proyecto
-                </v-btn>
+                <v-btn color="blue darken-1" flat @click="startProjectDialog = false; newProject.isLoading = false;"> Cerrar         </v-btn>
+                <v-btn color="blue darken-1" flat @click="startProject" :loading="newProject.isLoading">              Crear proyecto </v-btn>
               </v-card-actions>
             </v-card>
           </v-dialog>
