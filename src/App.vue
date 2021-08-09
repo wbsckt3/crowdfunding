@@ -208,7 +208,6 @@
 import crowdfundInstance from '../contracts/crowdfundInstance';
 import crowdfundProject from '../contracts/crowdfundProjectInstance';
 import storeNumberInstance from '../contracts/storeNumberInstance';
-import instagramPostingInstance from '../contracts/instagramPostingInstance';
 import farmTokenInstance from '../contracts/farmTokenInstance';
 import web3 from '../contracts/web3';
 export default {
