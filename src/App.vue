@@ -131,7 +131,7 @@
                 <v-container class="pt-0" grid-list-md>
                      <v-layout wrap>
                     <v-flex xs12>
-                     <v-text-field label="Token amount" persistent-hint v-model="deposit.amount"> </v-text-field>
+                     <v-text-field label="Token amount" persistent-hint v-model=""> </v-text-field>
                   </v-flex>
                        </v-layout>
                     </v-container>
@@ -146,10 +146,7 @@
         </v-layout>
         
         
-        <v-layout
-          text-xs-center
-          wrap
-        >
+        <v-layout text-xs-center wrap>
           <v-flex mb-4>   <hr/>                    
             <p><a href="https://defimath.herokuapp.com" target="_blank">Calcúla el costo de las transacciones en Ethereum</a> <br> 
             <a href="https://metamask.io" target="_blank">Obtener Metamask | billetera digital (Extension para Chrome o Firefox)</a> <br>
