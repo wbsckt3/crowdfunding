@@ -121,7 +121,29 @@
         </v-layout>
         
         
-        
+        <v-layout row justify-center>
+         <v-dialog v-model="startProjectDialog3" max-width="600px" persistent>
+            <v-btn slot="activator" color="primary" dark>
+             Generar un deposito de SIM token sobre FarmToken Holder: 0xf6e892ee75193485f871d6a46415f13febb7cbc5 El Holder es desplegado sobre SIM token
+          </v-btn>
+            <v-card>
+             <v-card-text class="pt-0">
+              <v-container class="pt-0" grid-list-md>
+                   <v-layout wrap>
+                  <v-flex xs12>
+                   <v-text-field label="Token amount" persistent-hint v-model="deposit.amount"> </v-text-field>
+                </v-flex>
+                     </v-layout>
+                  </v-container>
+               </v-card-text>
+               <v-card-actions>
+                  <v-spacer></v-spacer>
+                  <v-btn color="blue darken-1" flat @click="startProjectDialog3 = false; deposit.isLoading = false;"> Cerrar           </v-btn>
+                  <v-btn color="blue darken-1" flat @click="deposit":loading="deposit.isLoading">                     Depositar tokens </v-btn>
+               </v-card-actions>
+            </v-card>
+         </v-dialog>
+      </v-layout>
         
         
         
@@ -218,6 +240,7 @@ export default {
     return {
       startProjectDialog: false,
       startProjectDialog2: true,
+      startProjectDialog2: false,
       account: null,
       stateMap: [
         { color: 'primary', text: 'En curso' },
