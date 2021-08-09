@@ -16,12 +16,12 @@
       </v-container>
 
       <v-container grid-list-lg>
-        <h3 class="" style="margin-top: -75px;"> Bloques generados a partir del contrato contenedor : <b>0x8CfAc34881D1ceFc125e87EaB1Cd95d6Ca3fd789</b> {{ this.balan }}</h3>
+        <h3 class="" style="margin-top: -75px;"> Bloques generados a partir del contrato contenedor : <b>0x8CfAc34881D1ceFc125e87EaB1Cd95d6Ca3fd789</b> </h3>
         <v-layout row flex>
           <v-flex v-for="(project, index) in projectData" :key="index" xs4>
             <v-dialog v-model="project.dialog" width="800">
               <v-card>
-                <v-card-title class="headline font-weight-bold"> {{ project.projectTitle }} </v-card-title>
+                <v-card-title class="headline font-weight-bold"> {{ project.projectTitle }} {{ project.balan }}</v-card-title>
                 <v-card-text> {{ project.projectDesc }} </v-card-text>
                 <v-card-actions>
                   <v-spacer></v-spacer>
@@ -200,7 +200,6 @@ export default {
       ],
       projectData: [],
       newProject: { isLoading: false },
-      balan = "",
     };
   },
   mounted() {
@@ -280,7 +279,7 @@ export default {
     bal(){
       const balance = farmTokenInstance.methods.balance().call();
       console.log(balance);
-      this.balan = balance;
+      this.projectData[index].balan = balance;
     }
   },
 };
